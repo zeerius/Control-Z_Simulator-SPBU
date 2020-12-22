@@ -25,6 +25,13 @@ public class Pelanggan implements TambahKurang {
 	}
 	
 	/**
+	 * Method accessor untuk mengembalikan jenis kendaraan milik pelanggan
+	 */
+	public String getJenisKendaraan() {
+		return this.jenisKendaraan;
+	}
+
+	/**
 	 * Method untuk menambahkan jumlah uang Pelanggan
 	 * @param uang
 	 */
@@ -41,4 +48,12 @@ public class Pelanggan implements TambahKurang {
 	public void kurangi(int uang) {
 		this.uang -= uang;
 	}
+	
+	/**
+	 * Method untuk menampilkan uang dan jenis kendaraan milik pelanggan dalam bentuk String
+	 */
+	public String toString() {
+		return "Pelanggan memiliki uang sejumlah Rp "+this.uang+" dan jenis kendaraan yang dimilikinya adalah "+this.jenisKendaraan;
+	}
+	
 }
