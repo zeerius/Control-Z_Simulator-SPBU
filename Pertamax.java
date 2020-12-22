@@ -20,4 +20,24 @@ public class Pertamax
     {
         return this.tangkiPertamax;
     }
+
+    @Override
+    public boolean tambahPelanggan(Pelanggan pelanggan)
+    {
+        if(pelangganPertamax.size() < 10) {
+            pelangganPertamax.add(pelanggan);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean hapusPelanggan(Pelanggan pelanggan)
+    {
+        if(pelangganPertamax.contains(pelanggan)) {
+            pelangganPertamax.remove(pelanggan);
+            return true;
+        }
+        return false;
+    }
 }
