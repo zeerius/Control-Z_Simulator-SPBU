@@ -12,6 +12,8 @@ public abstract class SPBU
     public abstract void isiMinyak();
 
     public abstract boolean tambahPelanggan(Pelanggan pelanggan);
+
+    public abstract boolean hapusPelanggan(Pelanggan pelanggan);
     
     // keterangan
     public String toString()
