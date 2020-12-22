@@ -45,23 +45,16 @@ public class Solar extends SPBU
     @Override
     public void isiMinyak()
     {
-        Scanner sc = new Scanner(System.in);
 
-        if(cekIsiTangki) {
-            System.out.print("Input banyak minyak (liter) : ");
-            int liter = sc.nextInt();
-            int biaya = liter * tangkiSolar.getHarga();
-            
-        } else {
-            System.out.println("Tangki kosong!!");
-        }
     }
 
     public boolean cekIsiTangki()
     {
-        if(tangkiSolar.getIsiTangki() < 60) {
-            return false;
-        }
-        return true;
+        return tangkiSolar.getIsiTangki() >= 60;
+    }
+
+    public boolean cekUangPelanggan()
+    {
+        return pelangganSolar.get(0).getUang() >= tangkiSolar.getHarga();
     }
 }
