@@ -13,7 +13,7 @@ public abstract class SPBU
 
     public abstract boolean tambahPelanggan(Pelanggan pelanggan);
 
-    public abstract boolean hapusPelanggan(Pelanggan pelanggan);
+    public abstract void hapusPelanggan();
     
     // keterangan
     public String toString()

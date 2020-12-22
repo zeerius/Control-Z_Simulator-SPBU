@@ -9,7 +9,7 @@ public class Solar extends SPBU
     public Solar()
     {
         pelangganSolar = new ArrayList<>();
-        tangkiSolar = new BahanBakar();
+        tangkiSolar = new BahanBakar(6000, "Solar", 1000, 1000);
     }
 
     public ArrayList<Pelanggan> getPelangganSolar()
@@ -33,13 +33,9 @@ public class Solar extends SPBU
     }
 
     @Override
-    public boolean hapusPelanggan(Pelanggan pelanggan)
+    public void hapusPelanggan()
     {
-        if(pelangganSolar.contains(pelanggan)) {
-            pelangganSolar.remove(pelanggan);
-            return true;
-        }
-        return false;
+        pelangganSolar.remove(0);
     }
 
     @Override
