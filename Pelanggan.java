@@ -7,8 +7,24 @@
 public class Pelanggan implements TambahKurang {
 	private int uang;
 	private String jenisKendaraan;
-  
-  /**
+	
+	/**
+	 * Method constructor Pelanggan
+	 * @param uang,jenisKendaraan
+	 */
+	public Pelanggan(int uang, String jenisKendaraan) {
+		this.uang = uang;
+		this.jenisKendaraan = jenisKendaraan;
+	}
+
+	/**
+	 * Method accessor untuk mengembalikan jumlah uang pelanggan
+	 */
+	public int getUang() {
+		return this.uang;
+	}
+	
+	/**
 	 * Method untuk menambahkan jumlah uang Pelanggan
 	 * @param uang
 	 */
