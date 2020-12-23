@@ -38,6 +38,7 @@ public class Pelanggan implements TambahKurang {
 	@Override
 	public void tambah(int uang) {
 		this.uang += uang;
+		System.out.println("Rp "+uang+" berhasil ditambahkan");
 	}
 
 	/**
