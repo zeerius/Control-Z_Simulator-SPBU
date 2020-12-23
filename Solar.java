@@ -9,7 +9,7 @@ public class Solar extends SPBU
     public Solar()
     {
         pelangganSolar = new ArrayList<>();
-        tangkiSolar = new BahanBakar(6000, "Solar", 1000, 1000);
+        tangkiSolar = new BahanBakar(9500, "Solar", 1000, 1000);
     }
 
     public ArrayList<Pelanggan> getPelangganSolar()
@@ -74,12 +74,14 @@ public class Solar extends SPBU
                 else {
                     System.out.println("Selamat tinggal");
                     hapusPelanggan();
+                    sc.close();
                     return;
                 }
             }
             else {
                 System.out.println("Anda tidak dapat melakukan pengisian bahan bakar");
                 hapusPelanggan();
+                sc.close();
                 return;
             }
         }
@@ -88,6 +90,7 @@ public class Solar extends SPBU
         pendapatan += biaya;
         System.out.println("Bahan bakar berhasil diisi");
         hapusPelanggan();
+        sc.close();
     }
 
     public boolean cekIsiTangki()
