@@ -54,6 +54,34 @@ public class User implements TambahKurang {
     public String getPassword() {
         return this.password;
     }
+
+    /**
+     * Method mutator untuk memasukkan nama User
+     */
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    /**
+     * Method accessor untuk mengembalikan nama User
+     */
+    public String getNama() {
+        return this.nama;
+    }
+
+    /**
+     * Method mutator untuk memasukkan alamat User
+     */
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
+    /**
+     * Method accessor untuk mengembalikan alamat User
+     */
+    public String getAlamat() {
+        return this.alamat;
+    }
 	
    /**
     * Method untuk menambahkan jumlah saldo User
