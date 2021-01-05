@@ -1092,6 +1092,18 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.revalidate();
     }                                            
 
+    private void textFieldJumlahLiterFocusGained(java.awt.event.FocusEvent evt) {                                                 
+        if(textFieldJumlahLiter.getText().equals("Masukkan jumlah liter")) {
+            textFieldJumlahLiter.setText("");
+        }
+    }                                                
+
+    private void textFieldJumlahLiterFocusLost(java.awt.event.FocusEvent evt) {                                               
+        if(textFieldJumlahLiter.getText().equals("")) {
+            textFieldJumlahLiter.setText("Masukkan jumlah liter");
+        }
+    }                                              
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
