@@ -1,6 +1,14 @@
 public class GUI extends javax.swing.JFrame
 {  
     private javax.swing.JPanel panelFrame;
+    private javax.swing.JPanel panelIsiDataUser;
+    private javax.swing.JPanel panelIsiMinyak;
+    private javax.swing.JPanel panelLogin;
+    private javax.swing.JPanel panelMenu;
+    private javax.swing.JPanel panelProfil;
+    private javax.swing.JPanel panelRegister;
+    private javax.swing.JPanel panelTopUp;
+    private javax.swing.JPanel panelUtama;
 
     public GUI() {
         initComponents();
