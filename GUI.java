@@ -1147,6 +1147,30 @@ public class GUI extends javax.swing.JFrame {
                     panelUtama.repaint();
                     panelUtama.revalidate();
                 }
+                else if(spbu.cekSaldoUser(user.getSaldo())){
+                    int literCukup = user.getSaldo() / spbu.getTangki().getHarga();
+                    String dialogKurangiLiter = "Dengan saldo yang Anda miliki, Anda hanya dapat mengisi " + literCukup + " liter \n" +
+                            "Apakah Anda tetap ingin mengisi?";
+                    pilihan = JOptionPane.showConfirmDialog(this, dialogKurangiLiter, "KURANGI LITER", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                    
+                    if (pilihan == JOptionPane.YES_OPTION) {
+                        liter = literCukup;
+                        biaya = liter * spbu.getTangki().getHarga();
+                        spbu.isiMinyak(user, liter, biaya);
+                        // pop up berhasil
+                    }
+                    else {
+                        // pop up gagal
+                    }
+                    // balek ke panel menu
+                    panelUtama.removeAll();
+                    panelUtama.repaint();
+                    panelUtama.revalidate();
+
+                    panelUtama.add(panelMenu);
+                    panelUtama.repaint();
+                    panelUtama.revalidate();
+                }
                 else {
                     JOptionPane.showMessageDialog(this, "Pengisian Bahan Bakar Gagal Dilakukan", "STATUS TRANSAKSI", JOptionPane.ERROR_MESSAGE);
                     panelUtama.removeAll();
@@ -1157,8 +1181,8 @@ public class GUI extends javax.swing.JFrame {
                     panelUtama.repaint();
                     panelUtama.revalidate();
                 }
-                // isi minyak
             }
+            // isi minyak
         }
         
     }                                         
