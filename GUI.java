@@ -1158,9 +1158,11 @@ public class GUI extends javax.swing.JFrame {
                         biaya = liter * spbu.getTangki().getHarga();
                         spbu.isiMinyak(user, liter, biaya);
                         // pop up berhasil
+                        JOptionPane.showMessageDialog(this, "Pengisian Bahan Bakar Berhasil Dilakukan", "STATUS TRANSAKSI", JOptionPane.INFORMATION_MESSAGE);                        
                     }
                     else {
                         // pop up gagal
+                        JOptionPane.showMessageDialog(this, "Pengisian Bahan Bakar Gagal Dilakukan", "STATUS TRANSAKSI", JOptionPane.ERROR_MESSAGE);
                     }
                     // balek ke panel menu
                     panelUtama.removeAll();
@@ -1181,8 +1183,10 @@ public class GUI extends javax.swing.JFrame {
                     panelUtama.repaint();
                     panelUtama.revalidate();
                 }
+            } 
+            else {
+                // isi minyak
             }
-            // isi minyak
         }
         
     }                                         
