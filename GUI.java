@@ -64,6 +64,16 @@ public class GUI extends javax.swing.JFrame
         buttonKembali1 = new javax.swing.JButton();
         
         panelLogin = new javax.swing.JPanel();
+        labelLogin = new javax.swing.JLabel();
+        labelEmail2 = new javax.swing.JLabel();
+        textFieldEmail2 = new javax.swing.JTextField();
+        labelPassword2 = new javax.swing.JLabel();
+        passwordField2 = new javax.swing.JPasswordField();
+        buttonLogin = new javax.swing.JButton();
+        buttonExit2 = new javax.swing.JButton();
+        labelGoPerta1 = new javax.swing.JLabel();
+        labelValidasi = new javax.swing.JLabel();
+        
         panelMenu = new javax.swing.JPanel();
         panelIsiMinyak = new javax.swing.JPanel();
         panelCekSaldo = new javax.swing.JPanel();
@@ -383,6 +393,124 @@ public class GUI extends javax.swing.JFrame
         panelLogin.setBackground(new java.awt.Color(196, 69, 105));
         panelLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         panelLogin.setToolTipText("");
+        
+        labelLogin.setFont(new java.awt.Font("Century Gothic", 3, 36)); // NOI18N
+        labelLogin.setForeground(new java.awt.Color(252, 243, 243));
+        labelLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelLogin.setText("LOGIN");
+
+        labelEmail2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        labelEmail2.setForeground(new java.awt.Color(252, 243, 243));
+        labelEmail2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelEmail2.setText("E-mail");
+
+        textFieldEmail2.setBackground(new java.awt.Color(252, 243, 243));
+        textFieldEmail2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        textFieldEmail2.setText("Masukkan email anda");
+        textFieldEmail2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textFieldEmail2FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textFieldEmail2FocusLost(evt);
+            }
+        });
+        textFieldEmail2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldEmail2ActionPerformed(evt);
+            }
+        });
+
+        labelPassword2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        labelPassword2.setForeground(new java.awt.Color(252, 243, 243));
+        labelPassword2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelPassword2.setText("Password");
+
+        passwordField2.setBackground(new java.awt.Color(252, 243, 243));
+        passwordField2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordField2FocusLost(evt);
+            }
+        });
+
+        buttonLogin.setBackground(new java.awt.Color(252, 243, 243));
+        buttonLogin.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        buttonLogin.setText("Login");
+        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLoginActionPerformed(evt);
+            }
+        });
+
+        buttonExit2.setBackground(new java.awt.Color(252, 243, 243));
+        buttonExit2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        buttonExit2.setText("Exit");
+        buttonExit2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonExit2ActionPerformed(evt);
+            }
+        });
+
+        labelGoPerta1.setFont(new java.awt.Font("Century Gothic", 3, 18)); // NOI18N
+        labelGoPerta1.setForeground(new java.awt.Color(252, 243, 243));
+        labelGoPerta1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelGoPerta1.setText("goPERTA");
+
+        labelValidasi.setFont(new java.awt.Font("Century Gothic", 2, 14)); // NOI18N
+        labelValidasi.setForeground(new java.awt.Color(196, 69, 105));
+        labelValidasi.setText("Email atau password yang anda masukkan tidak sesuai");
+
+        javax.swing.GroupLayout panelLoginLayout = new javax.swing.GroupLayout(panelLogin);
+        panelLogin.setLayout(panelLoginLayout);
+        panelLoginLayout.setHorizontalGroup(
+            panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelLoginLayout.createSequentialGroup()
+                .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelLoginLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(labelGoPerta1))
+                    .addGroup(panelLoginLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelLoginLayout.createSequentialGroup()
+                                .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelEmail2)
+                                    .addComponent(labelPassword2))
+                                .addGap(20, 20, 20)
+                                .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(panelLoginLayout.createSequentialGroup()
+                                        .addComponent(buttonLogin)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(buttonExit2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(textFieldEmail2, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
+                                    .addComponent(labelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(passwordField2)))
+                            .addComponent(labelValidasi))))
+                .addContainerGap(73, Short.MAX_VALUE))
+        );
+        panelLoginLayout.setVerticalGroup(
+            panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelLoginLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelGoPerta1)
+                .addGap(145, 145, 145)
+                .addComponent(labelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(labelEmail2, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(textFieldEmail2))
+                .addGap(18, 18, 18)
+                .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelPassword2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labelValidasi)
+                .addGap(12, 12, 12)
+                .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonLogin)
+                    .addComponent(buttonExit2))
+                .addGap(245, 245, 245))
+        );
 
         panelUtama.add(panelLogin, "card3");
 
@@ -519,6 +647,25 @@ public class GUI extends javax.swing.JFrame
         if(textFieldNoHP.getText().equals("")) {
             textFieldNoHP.setText("Masukkan nomor handphone anda");
         }
+    }
+    
+    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        if(textFieldEmail2.getText().equals(user.getEmail()) && String.valueOf(passwordField2.getPassword()).equals(user.getPassword())) {
+            panelUtama.removeAll();
+            panelUtama.repaint();
+            panelUtama.revalidate();
+        
+            panelUtama.add(panelMenu);
+            panelUtama.repaint();
+            panelUtama.revalidate();
+        }
+        else {
+            labelValidasi.setForeground(Color.black);
+        }
+    }                                           
+
+    private void buttonExit2ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        System.exit(0);
     }
     
     
