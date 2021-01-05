@@ -129,6 +129,13 @@ public class User implements TambahKurang {
     }
 
     /**
+     * Method accessor untuk mengembalikan saldo User
+     */
+    public int getSaldo() {
+        return this.saldo;
+    }
+
+    /**
      * Method untuk menampilkan saldo dan jenis kendaraan milik User dalam bentuk String
      */
     public String toString() {
