@@ -1183,9 +1183,18 @@ public class GUI extends javax.swing.JFrame {
                     panelUtama.repaint();
                     panelUtama.revalidate();
                 }
-            } 
+            }
             else {
-                // isi minyak
+                spbu.isiMinyak(user, liter, biaya);
+                // pop up berhasil
+                JOptionPane.showMessageDialog(this, "Pengisian Bahan Bakar Berhasil Dilakukan", "STATUS TRANSAKSI", JOptionPane.INFORMATION_MESSAGE);
+                panelUtama.removeAll();
+                panelUtama.repaint();
+                panelUtama.revalidate();
+
+                panelUtama.add(panelMenu);
+                panelUtama.repaint();
+                panelUtama.revalidate();
             }
         }
         
