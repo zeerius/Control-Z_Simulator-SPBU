@@ -1,5 +1,35 @@
-public class GUI extends javax.swing.JFrame
-{  
+import java.awt.Color;
+import javax.swing.JFrame;
+
+public class GUI extends javax.swing.JFrame {
+
+    private javax.swing.JButton buttonCekSaldo;
+    private javax.swing.JButton buttonExit;
+    private javax.swing.JButton buttonExit2;
+    private javax.swing.JButton buttonIsiMinyak;
+    private javax.swing.JButton buttonKembali1;
+    private javax.swing.JButton buttonLogin;
+    private javax.swing.JButton buttonLogout;
+    private javax.swing.JButton buttonNext;
+    private javax.swing.JButton buttonProfil;
+    private javax.swing.JButton buttonRegister;
+    private javax.swing.JButton buttonTopUp;
+    private javax.swing.JLabel labelAlamat;
+    private javax.swing.JLabel labelCreateAccount;
+    private javax.swing.JLabel labelEmail;
+    private javax.swing.JLabel labelEmail2;
+    private javax.swing.JLabel labelGoPerta;
+    private javax.swing.JLabel labelGoPerta1;
+    private javax.swing.JLabel labelGoPerta2;
+    private javax.swing.JLabel labelIsiData;
+    private javax.swing.JLabel labelJenisKendaraan;
+    private javax.swing.JLabel labelLogin;
+    private javax.swing.JLabel labelNama;
+    private javax.swing.JLabel labelNoHP;
+    private javax.swing.JLabel labelPassword;
+    private javax.swing.JLabel labelPassword2;
+    private javax.swing.JLabel labelValidasi;
+    private javax.swing.JPanel panelCekSaldo;
     private javax.swing.JPanel panelFrame;
     private javax.swing.JPanel panelIsiDataUser;
     private javax.swing.JPanel panelIsiMinyak;
@@ -9,24 +39,17 @@ public class GUI extends javax.swing.JFrame
     private javax.swing.JPanel panelRegister;
     private javax.swing.JPanel panelTopUp;
     private javax.swing.JPanel panelUtama;
-    private javax.swing.JButton buttonNext;
-    private javax.swing.JButton buttonExit;
-    private javax.swing.JLabel labelCreateAccount;
-    private javax.swing.JLabel labelEmail;
-    private javax.swing.JLabel labelPassword;
-    private javax.swing.JTextField textFieldEmail;
     private javax.swing.JPasswordField passwordField;
-    private javax.swing.JLabel labelAlamat;
-    private javax.swing.JLabel labelIsiData;
-    private javax.swing.JLabel labelJenisKendaraan;
-    private javax.swing.JLabel labelNama;
-    private javax.swing.JLabel labelNoHP;
+    private javax.swing.JPasswordField passwordField2;
     private javax.swing.JTextField textFieldAlamat;
+    private javax.swing.JTextField textFieldEmail;
+    private javax.swing.JTextField textFieldEmail2;
     private javax.swing.JTextField textFieldJenisKendaraan;
     private javax.swing.JTextField textFieldNama;
     private javax.swing.JTextField textFieldNoHP;
-    private javax.swing.JButton buttonRegister;
-    private javax.swing.JButton buttonKembali1;
+    
+    private User user;
+    
     
     public GUI() {
         initComponents();
@@ -34,12 +57,12 @@ public class GUI extends javax.swing.JFrame
         setVisible(true);
         setResizable(false);
     }
-    
+
+    @SuppressWarnings("unchecked")                   
     private void initComponents() {
 
         panelFrame = new javax.swing.JPanel();
         panelUtama = new javax.swing.JPanel();
-        
         panelRegister = new javax.swing.JPanel();
         labelCreateAccount = new javax.swing.JLabel();
         labelEmail = new javax.swing.JLabel();
@@ -49,7 +72,6 @@ public class GUI extends javax.swing.JFrame
         labelGoPerta = new javax.swing.JLabel();
         buttonNext = new javax.swing.JButton();
         buttonExit = new javax.swing.JButton();
-        
         panelIsiDataUser = new javax.swing.JPanel();
         labelIsiData = new javax.swing.JLabel();
         labelNama = new javax.swing.JLabel();
@@ -62,7 +84,6 @@ public class GUI extends javax.swing.JFrame
         textFieldNoHP = new javax.swing.JTextField();
         buttonRegister = new javax.swing.JButton();
         buttonKembali1 = new javax.swing.JButton();
-        
         panelLogin = new javax.swing.JPanel();
         labelLogin = new javax.swing.JLabel();
         labelEmail2 = new javax.swing.JLabel();
@@ -73,25 +94,29 @@ public class GUI extends javax.swing.JFrame
         buttonExit2 = new javax.swing.JButton();
         labelGoPerta1 = new javax.swing.JLabel();
         labelValidasi = new javax.swing.JLabel();
-        
         panelMenu = new javax.swing.JPanel();
+        labelGoPerta2 = new javax.swing.JLabel();
+        buttonIsiMinyak = new javax.swing.JButton();
+        buttonCekSaldo = new javax.swing.JButton();
+        buttonTopUp = new javax.swing.JButton();
+        buttonProfil = new javax.swing.JButton();
+        buttonLogout = new javax.swing.JButton();
         panelIsiMinyak = new javax.swing.JPanel();
         panelCekSaldo = new javax.swing.JPanel();
         panelTopUp = new javax.swing.JPanel();
         panelProfil = new javax.swing.JPanel();
-        
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplikasi goPERTA");
 
         panelFrame.setBackground(new java.awt.Color(196, 69, 105));
-        
-        
+
         panelUtama.setLayout(new java.awt.CardLayout());
 
         panelRegister.setBackground(new java.awt.Color(196, 69, 105));
         panelRegister.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        panelRegister.setFont(new java.awt.Font("Century Gothic", 0, 14));
-        
+        panelRegister.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+
         labelCreateAccount.setFont(new java.awt.Font("Century Gothic", 3, 36)); // NOI18N
         labelCreateAccount.setForeground(new java.awt.Color(252, 243, 243));
         labelCreateAccount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -209,7 +234,7 @@ public class GUI extends javax.swing.JFrame
                     .addComponent(buttonExit))
                 .addContainerGap(251, Short.MAX_VALUE))
         );
-        
+
         panelUtama.add(panelRegister, "card2");
 
         panelIsiDataUser.setBackground(new java.awt.Color(196, 69, 105));
@@ -393,7 +418,7 @@ public class GUI extends javax.swing.JFrame
         panelLogin.setBackground(new java.awt.Color(196, 69, 105));
         panelLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         panelLogin.setToolTipText("");
-        
+
         labelLogin.setFont(new java.awt.Font("Century Gothic", 3, 36)); // NOI18N
         labelLogin.setForeground(new java.awt.Color(252, 243, 243));
         labelLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -517,20 +542,140 @@ public class GUI extends javax.swing.JFrame
         panelMenu.setBackground(new java.awt.Color(196, 69, 105));
         panelMenu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
 
+        labelGoPerta2.setFont(new java.awt.Font("Century Gothic", 3, 48)); // NOI18N
+        labelGoPerta2.setForeground(new java.awt.Color(252, 243, 243));
+        labelGoPerta2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelGoPerta2.setText("goPERTA");
+
+        buttonIsiMinyak.setBackground(new java.awt.Color(252, 243, 243));
+        buttonIsiMinyak.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        buttonIsiMinyak.setText("Isi Minyak");
+        buttonIsiMinyak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonIsiMinyakActionPerformed(evt);
+            }
+        });
+
+        buttonCekSaldo.setBackground(new java.awt.Color(252, 243, 243));
+        buttonCekSaldo.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        buttonCekSaldo.setText("Cek Saldo");
+        buttonCekSaldo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCekSaldoActionPerformed(evt);
+            }
+        });
+
+        buttonTopUp.setBackground(new java.awt.Color(252, 243, 243));
+        buttonTopUp.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        buttonTopUp.setText("Top Up");
+        buttonTopUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonTopUpActionPerformed(evt);
+            }
+        });
+
+        buttonProfil.setBackground(new java.awt.Color(252, 243, 243));
+        buttonProfil.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        buttonProfil.setText("Profil");
+        buttonProfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonProfilActionPerformed(evt);
+            }
+        });
+
+        buttonLogout.setBackground(new java.awt.Color(252, 243, 243));
+        buttonLogout.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        buttonLogout.setText("Logout");
+        buttonLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLogoutActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
+        panelMenu.setLayout(panelMenuLayout);
+        panelMenuLayout.setHorizontalGroup(
+            panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMenuLayout.createSequentialGroup()
+                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(buttonLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonProfil, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonTopUp, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonCekSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelMenuLayout.createSequentialGroup()
+                            .addGap(129, 129, 129)
+                            .addComponent(labelGoPerta2))
+                        .addGroup(panelMenuLayout.createSequentialGroup()
+                            .addGap(117, 117, 117)
+                            .addComponent(buttonIsiMinyak, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(126, Short.MAX_VALUE))
+        );
+        panelMenuLayout.setVerticalGroup(
+            panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMenuLayout.createSequentialGroup()
+                .addGap(102, 102, 102)
+                .addComponent(labelGoPerta2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(buttonIsiMinyak, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(buttonCekSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(buttonTopUp, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(buttonProfil, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(buttonLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(166, Short.MAX_VALUE))
+        );
+
         panelUtama.add(panelMenu, "card4");
 
         panelIsiMinyak.setBackground(new java.awt.Color(196, 69, 105));
         panelIsiMinyak.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+
+        javax.swing.GroupLayout panelIsiMinyakLayout = new javax.swing.GroupLayout(panelIsiMinyak);
+        panelIsiMinyak.setLayout(panelIsiMinyakLayout);
+        panelIsiMinyakLayout.setHorizontalGroup(
+            panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 476, Short.MAX_VALUE)
+        );
+        panelIsiMinyakLayout.setVerticalGroup(
+            panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 648, Short.MAX_VALUE)
+        );
 
         panelUtama.add(panelIsiMinyak, "card5");
 
         panelCekSaldo.setBackground(new java.awt.Color(196, 69, 105));
         panelCekSaldo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
 
+        javax.swing.GroupLayout panelCekSaldoLayout = new javax.swing.GroupLayout(panelCekSaldo);
+        panelCekSaldo.setLayout(panelCekSaldoLayout);
+        panelCekSaldoLayout.setHorizontalGroup(
+            panelCekSaldoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 476, Short.MAX_VALUE)
+        );
+        panelCekSaldoLayout.setVerticalGroup(
+            panelCekSaldoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 648, Short.MAX_VALUE)
+        );
+
         panelUtama.add(panelCekSaldo, "card6");
 
         panelTopUp.setBackground(new java.awt.Color(196, 69, 105));
         panelTopUp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+
+        javax.swing.GroupLayout panelTopUpLayout = new javax.swing.GroupLayout(panelTopUp);
+        panelTopUp.setLayout(panelTopUpLayout);
+        panelTopUpLayout.setHorizontalGroup(
+            panelTopUpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 476, Short.MAX_VALUE)
+        );
+        panelTopUpLayout.setVerticalGroup(
+            panelTopUpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 648, Short.MAX_VALUE)
+        );
 
         panelUtama.add(panelTopUp, "card7");
 
@@ -538,11 +683,50 @@ public class GUI extends javax.swing.JFrame
         panelProfil.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         panelProfil.setToolTipText("");
 
+        javax.swing.GroupLayout panelProfilLayout = new javax.swing.GroupLayout(panelProfil);
+        panelProfil.setLayout(panelProfilLayout);
+        panelProfilLayout.setHorizontalGroup(
+            panelProfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 476, Short.MAX_VALUE)
+        );
+        panelProfilLayout.setVerticalGroup(
+            panelProfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 648, Short.MAX_VALUE)
+        );
+
         panelUtama.add(panelProfil, "card8");
-        
+
+        javax.swing.GroupLayout panelFrameLayout = new javax.swing.GroupLayout(panelFrame);
+        panelFrame.setLayout(panelFrameLayout);
+        panelFrameLayout.setHorizontalGroup(
+            panelFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelFrameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelUtama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelFrameLayout.setVerticalGroup(
+            panelFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelFrameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelUtama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelFrame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelFrame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         pack();
         setLocationRelativeTo(null);
-    }
+    }// </editor-fold>                        
 
     private void buttonNextActionPerformed(java.awt.event.ActionEvent evt) {                                           
         String email = textFieldEmail.getText();
@@ -560,20 +744,67 @@ public class GUI extends javax.swing.JFrame
 
     private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {                                           
         System.exit(0);
-    }
-    
-    private void textFieldEmailFocusGained(java.awt.event.FocusEvent evt) {                                           
-        if(textFieldEmail.getText().equals("Masukkan email anda")) {
-            textFieldEmail.setText("");
-        }
     }                                          
 
-    private void textFieldEmailFocusLost(java.awt.event.FocusEvent evt) {                                         
-        if(textFieldEmail.getText().equals("")) {
-            textFieldEmail.setText("Masukkan email anda");
+    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        if(textFieldEmail2.getText().equals(user.getEmail()) && String.valueOf(passwordField2.getPassword()).equals(user.getPassword())) {
+            panelUtama.removeAll();
+            panelUtama.repaint();
+            panelUtama.revalidate();
+        
+            panelUtama.add(panelMenu);
+            panelUtama.repaint();
+            panelUtama.revalidate();
         }
-    }
-    
+        else {
+            labelValidasi.setForeground(Color.black);
+        }
+    }                                           
+
+    private void buttonExit2ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        System.exit(0);
+    }                                           
+
+    private void buttonIsiMinyakActionPerformed(java.awt.event.ActionEvent evt) {                                                
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+        
+        panelUtama.add(panelIsiMinyak);
+        panelUtama.repaint();
+        panelUtama.revalidate();
+    }                                               
+
+    private void buttonCekSaldoActionPerformed(java.awt.event.ActionEvent evt) {                                               
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+        
+        panelUtama.add(panelCekSaldo);
+        panelUtama.repaint();
+        panelUtama.revalidate();
+    }                                              
+
+    private void buttonTopUpActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+        
+        panelUtama.add(panelTopUp);
+        panelUtama.repaint();
+        panelUtama.revalidate();
+    }                                           
+
+    private void buttonProfilActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+        
+        panelUtama.add(panelProfil);
+        panelUtama.repaint();
+        panelUtama.revalidate();
+    }                                            
+
     private void buttonRegisterActionPerformed(java.awt.event.ActionEvent evt) {                                               
         String nama = textFieldNama.getText();
         String alamat = textFieldAlamat.getText();
@@ -599,8 +830,32 @@ public class GUI extends javax.swing.JFrame
         panelUtama.add(panelRegister);
         panelUtama.repaint();
         panelUtama.revalidate();
-    }
-    
+    }                                                                                      
+
+    private void textFieldEmail2FocusGained(java.awt.event.FocusEvent evt) {                                            
+        if(textFieldEmail2.getText().equals("Masukkan email anda")) {
+            textFieldEmail2.setText("");
+        }
+    }                                           
+
+    private void textFieldEmail2FocusLost(java.awt.event.FocusEvent evt) {                                          
+        if(textFieldEmail2.getText().equals("")) {
+            textFieldEmail2.setText("Masukkan email anda");
+        }
+    }                                         
+
+    private void textFieldEmailFocusGained(java.awt.event.FocusEvent evt) {                                           
+        if(textFieldEmail.getText().equals("Masukkan email anda")) {
+            textFieldEmail.setText("");
+        }
+    }                                          
+
+    private void textFieldEmailFocusLost(java.awt.event.FocusEvent evt) {                                         
+        if(textFieldEmail.getText().equals("")) {
+            textFieldEmail.setText("Masukkan email anda");
+        }
+    }                                        
+
     private void textFieldNamaFocusGained(java.awt.event.FocusEvent evt) {                                          
         if(textFieldNama.getText().equals("Masukkan nama anda")) {
             textFieldNama.setText("");
@@ -647,26 +902,8 @@ public class GUI extends javax.swing.JFrame
         if(textFieldNoHP.getText().equals("")) {
             textFieldNoHP.setText("Masukkan nomor handphone anda");
         }
-    }
-    
-    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {                                            
-        if(textFieldEmail2.getText().equals(user.getEmail()) && String.valueOf(passwordField2.getPassword()).equals(user.getPassword())) {
-            panelUtama.removeAll();
-            panelUtama.repaint();
-            panelUtama.revalidate();
-        
-            panelUtama.add(panelMenu);
-            panelUtama.repaint();
-            panelUtama.revalidate();
-        }
-        else {
-            labelValidasi.setForeground(Color.black);
-        }
-    }                                           
+    }                                       
 
-    private void buttonExit2ActionPerformed(java.awt.event.ActionEvent evt) {                                            
-        System.exit(0);
-    }
     
     
     public static void main(String args[]) {
@@ -694,4 +931,5 @@ public class GUI extends javax.swing.JFrame
             }
         });
     }
+
 }
