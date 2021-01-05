@@ -1131,6 +1131,26 @@ public class GUI extends javax.swing.JFrame {
         }
         else{
             
+            int biaya = liter * spbu.getTangki().getHarga();
+            if (biaya > user.getSaldo()) {
+                int biayaKurang = biaya - user.getSaldo();
+                String dialogKurangSaldo = "Maaf, saldo yang Anda miliki kurang Rp" + biayaKurang + ",00. \n" + 
+                        "Apakah Anda ingin menambah saldo?";
+                int pilihan = JOptionPane.showConfirmDialog(this, dialogKurangSaldo, "SALDO TIDAK CUKUP", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                
+                if (pilihan == JOptionPane.YES_OPTION) {
+                    panelUtama.removeAll();
+                    panelUtama.repaint();
+                    panelUtama.revalidate();
+
+                    panelUtama.add(panelTopUp);
+                    panelUtama.repaint();
+                    panelUtama.revalidate();
+                }
+                else {
+                    // gagal isi
+                }
+            }
             // isi minyak
         }
         
