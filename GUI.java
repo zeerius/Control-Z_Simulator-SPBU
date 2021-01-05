@@ -1113,6 +1113,15 @@ public class GUI extends javax.swing.JFrame {
             textFieldJumlahLiter.setText("Masukkan jumlah liter");
             return;
         }
+        //if solar 
+        SPBU spbu = solar;
+        if(!spbu.cekIsiTangki(liter)) {
+            spbu.getTangki().tambah(spbu.getTangki().getKapasitas() - spbu.getTangki().getIsiTangki());
+        }
+        else{
+            // isi minyak 
+        }
+        
     }                                         
 
     public static void main(String args[]) {
