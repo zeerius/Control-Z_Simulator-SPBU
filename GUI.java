@@ -16,6 +16,17 @@ public class GUI extends javax.swing.JFrame
     private javax.swing.JLabel labelPassword;
     private javax.swing.JTextField textFieldEmail;
     private javax.swing.JPasswordField passwordField;
+    private javax.swing.JLabel labelAlamat;
+    private javax.swing.JLabel labelIsiData;
+    private javax.swing.JLabel labelJenisKendaraan;
+    private javax.swing.JLabel labelNama;
+    private javax.swing.JLabel labelNoHP;
+    private javax.swing.JTextField textFieldAlamat;
+    private javax.swing.JTextField textFieldJenisKendaraan;
+    private javax.swing.JTextField textFieldNama;
+    private javax.swing.JTextField textFieldNoHP;
+    private javax.swing.JButton buttonRegister;
+    private javax.swing.JButton buttonKembali1;
     
     public GUI() {
         initComponents();
@@ -40,6 +51,18 @@ public class GUI extends javax.swing.JFrame
         buttonExit = new javax.swing.JButton();
         
         panelIsiDataUser = new javax.swing.JPanel();
+        labelIsiData = new javax.swing.JLabel();
+        labelNama = new javax.swing.JLabel();
+        textFieldNama = new javax.swing.JTextField();
+        labelAlamat = new javax.swing.JLabel();
+        textFieldAlamat = new javax.swing.JTextField();
+        labelJenisKendaraan = new javax.swing.JLabel();
+        textFieldJenisKendaraan = new javax.swing.JTextField();
+        labelNoHP = new javax.swing.JLabel();
+        textFieldNoHP = new javax.swing.JTextField();
+        buttonRegister = new javax.swing.JButton();
+        buttonKembali1 = new javax.swing.JButton();
+        
         panelLogin = new javax.swing.JPanel();
         panelMenu = new javax.swing.JPanel();
         panelIsiMinyak = new javax.swing.JPanel();
@@ -182,6 +205,179 @@ public class GUI extends javax.swing.JFrame
         panelIsiDataUser.setBackground(new java.awt.Color(196, 69, 105));
         panelIsiDataUser.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
 
+        labelIsiData.setFont(new java.awt.Font("Century Gothic", 3, 36)); // NOI18N
+        labelIsiData.setForeground(new java.awt.Color(252, 243, 243));
+        labelIsiData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelIsiData.setText("ISI DATA");
+
+        labelNama.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        labelNama.setForeground(new java.awt.Color(252, 243, 243));
+        labelNama.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelNama.setText("Nama");
+
+        textFieldNama.setBackground(new java.awt.Color(252, 243, 243));
+        textFieldNama.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        textFieldNama.setText("Masukkan nama anda"); // NOI18N
+        textFieldNama.setToolTipText("");
+        textFieldNama.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textFieldNamaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textFieldNamaFocusLost(evt);
+            }
+        });
+        textFieldNama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldNamaActionPerformed(evt);
+            }
+        });
+
+        labelAlamat.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        labelAlamat.setForeground(new java.awt.Color(252, 243, 243));
+        labelAlamat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelAlamat.setText("Alamat");
+
+        textFieldAlamat.setBackground(new java.awt.Color(252, 243, 243));
+        textFieldAlamat.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        textFieldAlamat.setText("Masukkan alamat anda"); // NOI18N
+        textFieldAlamat.setToolTipText("");
+        textFieldAlamat.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textFieldAlamatFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textFieldAlamatFocusLost(evt);
+            }
+        });
+        textFieldAlamat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldAlamatActionPerformed(evt);
+            }
+        });
+
+        labelJenisKendaraan.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        labelJenisKendaraan.setForeground(new java.awt.Color(252, 243, 243));
+        labelJenisKendaraan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelJenisKendaraan.setText("Jenis Kendaraan");
+
+        textFieldJenisKendaraan.setBackground(new java.awt.Color(252, 243, 243));
+        textFieldJenisKendaraan.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        textFieldJenisKendaraan.setText("Masukkan jenis kendaraan anda"); // NOI18N
+        textFieldJenisKendaraan.setToolTipText("");
+        textFieldJenisKendaraan.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textFieldJenisKendaraanFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textFieldJenisKendaraanFocusLost(evt);
+            }
+        });
+        textFieldJenisKendaraan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldJenisKendaraanActionPerformed(evt);
+            }
+        });
+
+        labelNoHP.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        labelNoHP.setForeground(new java.awt.Color(252, 243, 243));
+        labelNoHP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelNoHP.setText("No. HP");
+
+        textFieldNoHP.setBackground(new java.awt.Color(252, 243, 243));
+        textFieldNoHP.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        textFieldNoHP.setText("Masukkan nomor handphone anda"); // NOI18N
+        textFieldNoHP.setToolTipText("");
+        textFieldNoHP.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textFieldNoHPFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                textFieldNoHPFocusLost(evt);
+            }
+        });
+        textFieldNoHP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldNoHPActionPerformed(evt);
+            }
+        });
+
+        buttonRegister.setBackground(new java.awt.Color(252, 243, 243));
+        buttonRegister.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        buttonRegister.setText("Register");
+        buttonRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRegisterActionPerformed(evt);
+            }
+        });
+
+        buttonKembali1.setBackground(new java.awt.Color(252, 243, 243));
+        buttonKembali1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        buttonKembali1.setText("Kembali");
+        buttonKembali1.setToolTipText("");
+        buttonKembali1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonKembali1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelIsiDataUserLayout = new javax.swing.GroupLayout(panelIsiDataUser);
+        panelIsiDataUser.setLayout(panelIsiDataUserLayout);
+        panelIsiDataUserLayout.setHorizontalGroup(
+            panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelIsiDataUserLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelIsiDataUserLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelIsiData, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIsiDataUserLayout.createSequentialGroup()
+                        .addGroup(panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelAlamat)
+                            .addComponent(labelNama)
+                            .addComponent(labelJenisKendaraan)
+                            .addComponent(labelNoHP))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textFieldNama, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldJenisKendaraan, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldNoHP, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelIsiDataUserLayout.createSequentialGroup()
+                                .addComponent(buttonRegister)
+                                .addGap(18, 18, 18)
+                                .addComponent(buttonKembali1)))
+                        .addGap(18, 18, 18))))
+        );
+        panelIsiDataUserLayout.setVerticalGroup(
+            panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelIsiDataUserLayout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addComponent(labelIsiData, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(textFieldNama, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelNama, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelJenisKendaraan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldJenisKendaraan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelNoHP, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldNoHP, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonRegister)
+                    .addComponent(buttonKembali1))
+                .addContainerGap(227, Short.MAX_VALUE))
+        );
+
         panelUtama.add(panelIsiDataUser, "card9");
 
         panelLogin.setBackground(new java.awt.Color(196, 69, 105));
@@ -249,7 +445,83 @@ public class GUI extends javax.swing.JFrame
             textFieldEmail.setText("Masukkan email anda");
         }
     }
+    
+    private void buttonRegisterActionPerformed(java.awt.event.ActionEvent evt) {                                               
+        String nama = textFieldNama.getText();
+        String alamat = textFieldAlamat.getText();
+        String jenisKendaraan = textFieldJenisKendaraan.getText();
+        String noHp = textFieldNoHP.getText();
+        
+        // buat setter
+        
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+        
+        panelUtama.add(panelLogin);
+        panelUtama.repaint();
+        panelUtama.revalidate();
+    }                                              
 
+    private void buttonKembali1ActionPerformed(java.awt.event.ActionEvent evt) {                                               
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+        
+        panelUtama.add(panelRegister);
+        panelUtama.repaint();
+        panelUtama.revalidate();
+    }
+    
+    private void textFieldNamaFocusGained(java.awt.event.FocusEvent evt) {                                          
+        if(textFieldNama.getText().equals("Masukkan nama anda")) {
+            textFieldNama.setText("");
+        }
+    }                                         
+
+    private void textFieldNamaFocusLost(java.awt.event.FocusEvent evt) {                                        
+        if(textFieldNama.getText().equals("")) {
+            textFieldNama.setText("Masukkan nama anda");
+        }
+    }                                       
+
+    private void textFieldAlamatFocusGained(java.awt.event.FocusEvent evt) {                                            
+        if(textFieldAlamat.getText().equals("Masukkan alamat anda")) {
+            textFieldAlamat.setText("");
+        }
+    }                                           
+
+    private void textFieldAlamatFocusLost(java.awt.event.FocusEvent evt) {                                          
+        if(textFieldAlamat.getText().equals("")) {
+            textFieldAlamat.setText("Masukkan alamat anda");
+        }
+    }                                         
+
+    private void textFieldJenisKendaraanFocusGained(java.awt.event.FocusEvent evt) {                                                    
+        if(textFieldJenisKendaraan.getText().equals("Masukkan jenis kendaraan anda")) {
+            textFieldJenisKendaraan.setText("");
+        }
+    }                                                   
+
+    private void textFieldJenisKendaraanFocusLost(java.awt.event.FocusEvent evt) {                                                  
+        if(textFieldJenisKendaraan.getText().equals("")) {
+            textFieldJenisKendaraan.setText("Masukkan jenis kendaraan anda");
+        }
+    }                                                 
+
+    private void textFieldNoHPFocusGained(java.awt.event.FocusEvent evt) {                                          
+        if(textFieldNoHP.getText().equals("Masukkan nomor handphone anda")) {
+            textFieldNoHP.setText("");
+        }
+    }                                         
+
+    private void textFieldNoHPFocusLost(java.awt.event.FocusEvent evt) {                                        
+        if(textFieldNoHP.getText().equals("")) {
+            textFieldNoHP.setText("Masukkan nomor handphone anda");
+        }
+    }
+    
+    
     public static void main(String args[]) {
 
         try {
