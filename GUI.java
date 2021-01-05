@@ -1116,10 +1116,22 @@ public class GUI extends javax.swing.JFrame {
         //if solar 
         SPBU spbu = solar;
         if(!spbu.cekIsiTangki(liter)) {
+            // pesan nunggu 5 detik
+            Timer timer = new Timer();
+            TimerTask task = new TimerTask() {
+                public void run() {
+                    labelIsiUlang.setText("Tangki SPBU sudah terisi kembali");
+                    labelIsiUlang1.setText("Silakan klik kembali tombol ISI");
+                }
+            };
+            labelIsiUlang.setForeground(Color.black);
+            labelIsiUlang1.setForeground(Color.black);
             spbu.getTangki().tambah(spbu.getTangki().getKapasitas() - spbu.getTangki().getIsiTangki());
+            timer.scheduleAtFixedRate(task, 5000, 1);
         }
         else{
-            // isi minyak 
+            
+            // isi minyak
         }
         
     }                                         
