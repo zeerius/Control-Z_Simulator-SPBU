@@ -1104,6 +1104,17 @@ public class GUI extends javax.swing.JFrame {
         }
     }                                              
 
+    private void buttonIsiActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        int liter;
+        try {
+            liter =Integer.parseInt(textFieldJumlahLiter.getText());
+        } catch (Exception e) {
+            labelValidasiLiter.setForeground(Color.black);
+            textFieldJumlahLiter.setText("Masukkan jumlah liter");
+            return;
+        }
+    }                                         
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
