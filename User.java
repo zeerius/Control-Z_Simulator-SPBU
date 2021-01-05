@@ -82,6 +82,33 @@ public class User implements TambahKurang {
     public String getAlamat() {
         return this.alamat;
     }
+	/**
+	 * Method mutator untuk memasukkan jenis kendaraan milik User
+	 */
+    public void setJenisKendaraan(String jenisKendaraan) {
+        this.jenisKendaraan = jenisKendaraan;
+    }
+
+    /**
+     * Method accessor untuk mengembalikan jenis kendaraan milik User
+     */
+    public String getJenisKendaraan() {
+        return this.jenisKendaraan;
+    }
+
+    /**
+     * Method mutator untuk memasukkan no HP User
+     */
+    public void setNoHp(String noHp) {
+        this.noHp = noHp;
+    }
+
+    /**
+     * Method accessor untuk mengembalikan no HP User
+     */
+    public String getNoHp() {
+        return this.noHp;
+    }
 	
    /**
     * Method untuk menambahkan jumlah saldo User
@@ -92,13 +119,20 @@ public class User implements TambahKurang {
    this.saldo += saldo;
    }
 
-   /**
-    * Method untuk mengurangi jumlah saldo User
-    * @param saldo
-    */
+    /**
+     * Method untuk mengurangi jumlah saldo User
+     * @param saldo
+     */
     @Override
     public void kurangi(int saldo) {
     this.saldo -= saldo;
+    }
+
+    /**
+     * Method untuk menampilkan saldo dan jenis kendaraan milik User dalam bentuk String
+     */
+    public String toString() {
+    return "Pelanggan memiliki saldo sejumlah Rp "+this.saldo+" dan jenis kendaraan yang dimilikinya adalah "+this.jenisKendaraan;
     }
   
 }
