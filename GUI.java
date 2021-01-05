@@ -1148,10 +1148,17 @@ public class GUI extends javax.swing.JFrame {
                     panelUtama.revalidate();
                 }
                 else {
-                    // gagal isi
+                    JOptionPane.showMessageDialog(this, "Pengisian Bahan Bakar Gagal Dilakukan", "STATUS TRANSAKSI", JOptionPane.ERROR_MESSAGE);
+                    panelUtama.removeAll();
+                    panelUtama.repaint();
+                    panelUtama.revalidate();
+
+                    panelUtama.add(panelMenu);
+                    panelUtama.repaint();
+                    panelUtama.revalidate();
                 }
+                // isi minyak
             }
-            // isi minyak
         }
         
     }                                         
