@@ -3,6 +3,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class GUI extends javax.swing.JFrame {
     
@@ -25,6 +26,9 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton buttonProfil;
     private javax.swing.JButton buttonRegister;
     private javax.swing.JButton buttonTopUp;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelAlamat;
     private javax.swing.JLabel labelBahanBakar;
     private javax.swing.JLabel labelCreateAccount;
@@ -33,18 +37,21 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel labelGoPerta;
     private javax.swing.JLabel labelGoPerta1;
     private javax.swing.JLabel labelGoPerta2;
+    private javax.swing.JLabel labelIcon;
     private javax.swing.JLabel labelIsiData;
     private javax.swing.JLabel labelIsiUlang;
     private javax.swing.JLabel labelIsiUlang1;
     private javax.swing.JLabel labelJenisKendaraan;
     private javax.swing.JLabel labelLiter;
     private javax.swing.JLabel labelLogin;
+    private javax.swing.JLabel labelMenu;
     private javax.swing.JLabel labelNama;
     private javax.swing.JLabel labelNoHP;
     private javax.swing.JLabel labelPassword;
     private javax.swing.JLabel labelPassword2;
     private javax.swing.JLabel labelValidasi;
     private javax.swing.JLabel labelValidasiLiter;
+    private javax.swing.JPanel panelBtnMenu;
     private javax.swing.JPanel panelCekSaldo;
     private javax.swing.JPanel panelCreateAccount;
     private javax.swing.JPanel panelFrame;
@@ -132,6 +139,12 @@ public class GUI extends javax.swing.JFrame {
         labelIsiUlang = new javax.swing.JLabel();
         labelIsiUlang1 = new javax.swing.JLabel();
         labelValidasiLiter = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        panelBtnMenu = new javax.swing.JPanel();
+        labelIcon = new javax.swing.JLabel();
+        labelMenu = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         panelCekSaldo = new javax.swing.JPanel();
         panelTopUp = new javax.swing.JPanel();
         panelProfil = new javax.swing.JPanel();
@@ -418,9 +431,9 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(labelNama, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldNama, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textFieldAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelIsiDataUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textFieldJenisKendaraan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -497,9 +510,9 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        labelValidasi.setFont(new java.awt.Font("Century Gothic", 2, 14)); // NOI18N
+        labelValidasi.setFont(new java.awt.Font("Century", 2, 12)); // NOI18N
         labelValidasi.setForeground(new java.awt.Color(196, 69, 105));
-        labelValidasi.setText("Email or password incorrect");
+        labelValidasi.setText("Email or password incorrect ");
 
         labelGoPerta1.setFont(new java.awt.Font("Century Gothic", 3, 18)); // NOI18N
         labelGoPerta1.setForeground(new java.awt.Color(252, 243, 243));
@@ -655,14 +668,14 @@ public class GUI extends javax.swing.JFrame {
 
         panelUtama.add(panelMenu, "card2");
 
-        panelIsiMinyak.setBackground(new java.awt.Color(196, 69, 105));
+        panelIsiMinyak.setBackground(new java.awt.Color(255, 255, 255));
 
         labelBahanBakar.setFont(new java.awt.Font("Century Gothic", 3, 20)); // NOI18N
-        labelBahanBakar.setForeground(new java.awt.Color(252, 243, 243));
+        labelBahanBakar.setForeground(new java.awt.Color(196, 69, 105));
         labelBahanBakar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelBahanBakar.setText("PILIH JENIS BAHAN BAKAR");
 
-        radioButtonPremium.setBackground(new java.awt.Color(196, 69, 105));
+        radioButtonPremium.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupBahanBakar.add(radioButtonPremium);
         radioButtonPremium.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         radioButtonPremium.setText("Premium");
@@ -672,7 +685,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        radioButtonPertalite.setBackground(new java.awt.Color(196, 69, 105));
+        radioButtonPertalite.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupBahanBakar.add(radioButtonPertalite);
         radioButtonPertalite.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         radioButtonPertalite.setText("Pertalite");
@@ -682,7 +695,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        radioButtonPertamax.setBackground(new java.awt.Color(196, 69, 105));
+        radioButtonPertamax.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupBahanBakar.add(radioButtonPertamax);
         radioButtonPertamax.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         radioButtonPertamax.setText("Pertamax");
@@ -692,7 +705,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        radioButtonSolar.setBackground(new java.awt.Color(196, 69, 105));
+        radioButtonSolar.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupBahanBakar.add(radioButtonSolar);
         radioButtonSolar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         radioButtonSolar.setText("Solar");
@@ -703,7 +716,7 @@ public class GUI extends javax.swing.JFrame {
         });
 
         labelLiter.setFont(new java.awt.Font("Century Gothic", 3, 20)); // NOI18N
-        labelLiter.setForeground(new java.awt.Color(252, 243, 243));
+        labelLiter.setForeground(new java.awt.Color(196, 69, 105));
         labelLiter.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelLiter.setText("LITER BAHAN BAKAR");
 
@@ -735,78 +748,155 @@ public class GUI extends javax.swing.JFrame {
 
         labelIsiUlang.setBackground(new java.awt.Color(196, 69, 105));
         labelIsiUlang.setFont(new java.awt.Font("Century", 2, 12)); // NOI18N
-        labelIsiUlang.setForeground(new java.awt.Color(196, 69, 105));
+        labelIsiUlang.setForeground(new java.awt.Color(255, 0, 0));
         labelIsiUlang.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelIsiUlang.setText("Mohon tunggu sebentar");
         labelIsiUlang.setToolTipText("");
 
         labelIsiUlang1.setFont(new java.awt.Font("Century", 2, 12)); // NOI18N
-        labelIsiUlang1.setForeground(new java.awt.Color(196, 69, 105));
+        labelIsiUlang1.setForeground(new java.awt.Color(255, 0, 0));
         labelIsiUlang1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelIsiUlang1.setText("Tangki SPBU sedang diisi ulang");
         labelIsiUlang1.setToolTipText("");
 
         labelValidasiLiter.setBackground(new java.awt.Color(196, 69, 105));
         labelValidasiLiter.setFont(new java.awt.Font("Century", 2, 12)); // NOI18N
-        labelValidasiLiter.setForeground(new java.awt.Color(196, 69, 105));
+        labelValidasiLiter.setForeground(new java.awt.Color(255, 0, 0));
         labelValidasiLiter.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelValidasiLiter.setText("Mohon input bilangan bulat");
+        labelValidasiLiter.setText("Mohon input bilangan bulat 1 sampai 1000 ");
         labelValidasiLiter.setToolTipText("");
+
+        jPanel1.setBackground(new java.awt.Color(196, 69, 105));
+
+        panelBtnMenu.setBackground(new java.awt.Color(196, 69, 105));
+        panelBtnMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        panelBtnMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panelBtnMenuMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                panelBtnMenuMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                panelBtnMenuMousePressed(evt);
+            }
+        });
+
+        labelIcon.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        labelIcon.setIcon(new javax.swing.ImageIcon("D:\\Smt 3\\PBO\\ProjekLab\\goPERTA\\src\\main\\java\\com\\mycompany\\goperta\\menuIcon2.png")); // NOI18N
+        labelIcon.setToolTipText("");
+        labelIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                labelIconMouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                labelIconMousePressed(evt);
+            }
+        });
+
+        labelMenu.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        labelMenu.setText("MENU");
+        labelMenu.setToolTipText("");
+        labelMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                labelMenuMouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                labelMenuMousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelBtnMenuLayout = new javax.swing.GroupLayout(panelBtnMenu);
+        panelBtnMenu.setLayout(panelBtnMenuLayout);
+        panelBtnMenuLayout.setHorizontalGroup(
+            panelBtnMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBtnMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelIcon)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labelMenu)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        panelBtnMenuLayout.setVerticalGroup(
+            panelBtnMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBtnMenuLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelBtnMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(labelIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(labelMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Smt 3\\PBO\\ProjekLab\\goPERTA\\src\\main\\java\\com\\mycompany\\goperta\\iconFuel.png")); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(panelBtnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelBtnMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout panelIsiMinyakLayout = new javax.swing.GroupLayout(panelIsiMinyak);
         panelIsiMinyak.setLayout(panelIsiMinyakLayout);
         panelIsiMinyakLayout.setHorizontalGroup(
             panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIsiMinyakLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIsiMinyakLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelIsiMinyakLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIsiMinyakLayout.createSequentialGroup()
-                                .addGroup(panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(labelLiter, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelBahanBakar, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(39, 39, 39))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIsiMinyakLayout.createSequentialGroup()
-                                .addComponent(textFieldJumlahLiter, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(90, 90, 90))))
-                    .addGroup(panelIsiMinyakLayout.createSequentialGroup()
-                        .addComponent(labelIsiUlang, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                    .addComponent(labelBahanBakar, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelLiter, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(panelIsiMinyakLayout.createSequentialGroup()
                 .addGroup(panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelIsiMinyakLayout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(buttonIsi, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelIsiMinyakLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(labelValidasiLiter, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelIsiMinyakLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addGroup(panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelIsiMinyakLayout.createSequentialGroup()
+                                .addComponent(radioButtonPremium, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(radioButtonPertalite, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelIsiMinyakLayout.createSequentialGroup()
+                                .addComponent(radioButtonPertamax, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)
+                                .addComponent(radioButtonSolar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(panelIsiMinyakLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelIsiMinyakLayout.createSequentialGroup()
-                                .addGap(62, 62, 62)
-                                .addGroup(panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelIsiMinyakLayout.createSequentialGroup()
-                                        .addComponent(radioButtonPremium, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(radioButtonPertalite, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(panelIsiMinyakLayout.createSequentialGroup()
-                                        .addComponent(radioButtonPertamax, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(43, 43, 43)
-                                        .addComponent(radioButtonSolar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(panelIsiMinyakLayout.createSequentialGroup()
-                                .addGap(138, 138, 138)
-                                .addComponent(buttonIsi, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIsiMinyakLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(labelIsiUlang1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIsiMinyakLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(labelValidasiLiter, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                            .addComponent(labelIsiUlang1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelIsiUlang, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(panelIsiMinyakLayout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(textFieldJumlahLiter, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelIsiMinyakLayout.setVerticalGroup(
             panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelIsiMinyakLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(labelBahanBakar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(radioButtonPremium)
                     .addComponent(radioButtonPertalite))
@@ -814,19 +904,20 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(panelIsiMinyakLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(radioButtonPertamax)
                     .addComponent(radioButtonSolar))
-                .addGap(45, 45, 45)
+                .addGap(18, 18, 18)
                 .addComponent(labelLiter, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textFieldJumlahLiter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelValidasiLiter, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelValidasiLiter)
                 .addGap(15, 15, 15)
                 .addComponent(buttonIsi)
-                .addGap(56, 56, 56)
+                .addGap(18, 18, 18)
                 .addComponent(labelIsiUlang)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelIsiUlang1)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE))
         );
 
         panelUtama.add(panelIsiMinyak, "card2");
@@ -906,8 +997,8 @@ public class GUI extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }
-    
+    }// </editor-fold>                        
+
     private void textFieldEmailFocusGained(java.awt.event.FocusEvent evt) {                                           
         if(textFieldEmail.getText().equals("Masukkan email anda")) {
             textFieldEmail.setText("");
@@ -957,7 +1048,11 @@ public class GUI extends javax.swing.JFrame {
             textFieldNoHP.setText("Masukkan nomor hp anda");
         }
     }                                       
-                                            
+
+    private void textFieldNoHPActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        // TODO add your handling code here:
+    }                                             
+
     private void textFieldJenisKendaraanFocusGained(java.awt.event.FocusEvent evt) {                                                    
         if(textFieldJenisKendaraan.getText().equals("Masukkan jenis kendaraan anda")) {
             textFieldJenisKendaraan.setText("");
@@ -970,6 +1065,10 @@ public class GUI extends javax.swing.JFrame {
         }
     }                                                 
 
+    private void textFieldJenisKendaraanActionPerformed(java.awt.event.ActionEvent evt) {                                                        
+        // TODO add your handling code here:
+    }                                                       
+
     private void textFieldAlamatFocusGained(java.awt.event.FocusEvent evt) {                                            
         if(textFieldAlamat.getText().equals("Masukkan alamat anda")) {
             textFieldAlamat.setText("");
@@ -981,6 +1080,10 @@ public class GUI extends javax.swing.JFrame {
             textFieldAlamat.setText("Masukkan alamat anda");
         }
     }                                         
+
+    private void textFieldAlamatActionPerformed(java.awt.event.ActionEvent evt) {                                                
+        // TODO add your handling code here:
+    }                                               
 
     private void textFieldNamaFocusGained(java.awt.event.FocusEvent evt) {                                          
         if(textFieldNama.getText().equals("Masukkan nama anda")) {
@@ -1021,6 +1124,10 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.revalidate();
     }                                              
 
+    private void passwordField2FocusLost(java.awt.event.FocusEvent evt) {                                         
+
+    }                                        
+
     private void textFieldEmail2FocusGained(java.awt.event.FocusEvent evt) {                                            
         if(textFieldEmail2.getText().equals("Masukkan email anda")) {
             textFieldEmail2.setText("");
@@ -1031,7 +1138,7 @@ public class GUI extends javax.swing.JFrame {
         if(textFieldEmail2.getText().equals("")) {
             textFieldEmail2.setText("Masukkan email anda");
         }
-    }                                         
+    }                                                                                      
 
     private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {                                            
         if(textFieldEmail2.getText().equals(user.getEmail()) && String.valueOf(passwordField2.getPassword()).equals(user.getPassword())) {
@@ -1044,7 +1151,7 @@ public class GUI extends javax.swing.JFrame {
             panelUtama.revalidate();
         }
         else {
-            labelValidasi.setForeground(new Color(204,204,204));
+            labelValidasi.setForeground(Color.black);
         }
     }                                           
 
@@ -1053,13 +1160,7 @@ public class GUI extends javax.swing.JFrame {
     }                                           
 
     private void buttonIsiMinyakActionPerformed(java.awt.event.ActionEvent evt) {                                                
-        panelUtama.removeAll();
-        panelUtama.repaint();
-        panelUtama.revalidate();
-
-        panelUtama.add(panelIsiMinyak);
-        panelUtama.repaint();
-        panelUtama.revalidate();
+        resetPanelIsiMinyak(panelIsiMinyak);        
     }                                               
 
     private void buttonCekSaldoActionPerformed(java.awt.event.ActionEvent evt) {                                               
@@ -1090,10 +1191,10 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.add(panelProfil);
         panelUtama.repaint();
         panelUtama.revalidate();
-    }                                            
+    }                                                                                        
 
     private void textFieldJumlahLiterFocusGained(java.awt.event.FocusEvent evt) {                                                 
-        if(textFieldJumlahLiter.getText().equals("Masukkan jumlah liter")) {
+       if(textFieldJumlahLiter.getText().equals("Masukkan jumlah liter")) {
             textFieldJumlahLiter.setText("");
         }
     }                                                
@@ -1102,54 +1203,73 @@ public class GUI extends javax.swing.JFrame {
         if(textFieldJumlahLiter.getText().equals("")) {
             textFieldJumlahLiter.setText("Masukkan jumlah liter");
         }
-    }                                              
+    }                                                                                                 
 
     private void buttonIsiActionPerformed(java.awt.event.ActionEvent evt) {                                          
         int liter;
+        SPBU spbu;
+        //if solar atau paa
+        if (radioButtonPremium.isSelected()) {
+            spbu = premium;
+        }
+        else if (radioButtonPertalite.isSelected()){
+            spbu = pertalite;
+        }
+        else if (radioButtonPertamax.isSelected()) {
+            spbu = pertamax;
+        }
+        else if (radioButtonSolar.isSelected()) {
+            spbu = solar;
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "Anda belum memilih bahan bakar!", "BAHAN BAKAR", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
         try {
             liter =Integer.parseInt(textFieldJumlahLiter.getText());
+            if (liter <= 0 || liter > spbu.getTangki().getKapasitas()) {
+                throw new Exception();
+            }
         } catch (Exception e) {
-            labelValidasiLiter.setForeground(Color.black);
+            labelValidasiLiter.setVisible(true);
+            labelValidasiLiter.setText("Mohon input bilangan bulat 1 sampai " + spbu.getTangki().getKapasitas() + " ");
             textFieldJumlahLiter.setText("Masukkan jumlah liter");
             return;
         }
-        //if solar 
-        SPBU spbu = solar;
+    
         if(!spbu.cekIsiTangki(liter)) {
             // pesan nunggu 5 detik
             Timer timer = new Timer();
             TimerTask task = new TimerTask() {
                 public void run() {
-                    labelIsiUlang.setText("Tangki SPBU sudah terisi kembali");
-                    labelIsiUlang1.setText("Silakan klik kembali tombol ISI");
+                    labelIsiUlang.setText("Tangki SPBU sudah terisi kembali ");
+                    labelIsiUlang1.setText("Silakan klik kembali tombol ISI ");
+                    buttonIsi.setVisible(true);
                 }
             };
-            labelIsiUlang.setForeground(Color.black);
-            labelIsiUlang1.setForeground(Color.black);
+            labelIsiUlang.setVisible(true);
+            labelIsiUlang1.setVisible(true);
+            buttonIsi.setVisible(false);
             spbu.getTangki().tambah(spbu.getTangki().getKapasitas() - spbu.getTangki().getIsiTangki());
-            timer.scheduleAtFixedRate(task, 5000, 1);
+            timer.schedule(task, 5000);
         }
         else{
             
             int biaya = liter * spbu.getTangki().getHarga();
             if (biaya > user.getSaldo()) {
                 int biayaKurang = biaya - user.getSaldo();
-                String dialogKurangSaldo = "Maaf, saldo yang Anda miliki kurang Rp" + biayaKurang + ",00. \n" + 
-                        "Apakah Anda ingin menambah saldo?";
+                String dialogKurangSaldo = "Maaf, uang yang Anda miliki kurang Rp" + biayaKurang + ",00. \n" + 
+                        "Apakah Anda ingin menambah uang?";
                 int pilihan = JOptionPane.showConfirmDialog(this, dialogKurangSaldo, "SALDO TIDAK CUKUP", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
                 
                 if (pilihan == JOptionPane.YES_OPTION) {
-                    panelUtama.removeAll();
-                    panelUtama.repaint();
-                    panelUtama.revalidate();
-
-                    panelUtama.add(panelTopUp);
-                    panelUtama.repaint();
-                    panelUtama.revalidate();
+                    // user.tambah(biayaKurang);
+                    resetPanelIsiMinyak(panelTopUp);
                 }
                 else if(spbu.cekSaldoUser(user.getSaldo())){
                     int literCukup = user.getSaldo() / spbu.getTangki().getHarga();
-                    String dialogKurangiLiter = "Dengan saldo yang Anda miliki, Anda hanya dapat mengisi " + literCukup + " liter \n" +
+                    String dialogKurangiLiter = "Dengan uang yang Anda miliki, Anda hanya dapat mengisi " + literCukup + " liter \n" +
                             "Apakah Anda tetap ingin mengisi?";
                     pilihan = JOptionPane.showConfirmDialog(this, dialogKurangiLiter, "KURANGI LITER", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
                     
@@ -1163,43 +1283,98 @@ public class GUI extends javax.swing.JFrame {
                     else {
                         // pop up gagal
                         JOptionPane.showMessageDialog(this, "Pengisian Bahan Bakar Gagal Dilakukan", "STATUS TRANSAKSI", JOptionPane.ERROR_MESSAGE);
+                        //return;
                     }
                     // balek ke panel menu
-                    panelUtama.removeAll();
-                    panelUtama.repaint();
-                    panelUtama.revalidate();
-
-                    panelUtama.add(panelMenu);
-                    panelUtama.repaint();
-                    panelUtama.revalidate();
+                    resetPanelIsiMinyak(panelMenu);
                 }
                 else {
                     JOptionPane.showMessageDialog(this, "Pengisian Bahan Bakar Gagal Dilakukan", "STATUS TRANSAKSI", JOptionPane.ERROR_MESSAGE);
-                    panelUtama.removeAll();
-                    panelUtama.repaint();
-                    panelUtama.revalidate();
-
-                    panelUtama.add(panelMenu);
-                    panelUtama.repaint();
-                    panelUtama.revalidate();
+                    resetPanelIsiMinyak(panelMenu);
                 }
-            }
+            } 
             else {
                 spbu.isiMinyak(user, liter, biaya);
                 // pop up berhasil
                 JOptionPane.showMessageDialog(this, "Pengisian Bahan Bakar Berhasil Dilakukan", "STATUS TRANSAKSI", JOptionPane.INFORMATION_MESSAGE);
-                panelUtama.removeAll();
-                panelUtama.repaint();
-                panelUtama.revalidate();
-
-                panelUtama.add(panelMenu);
-                panelUtama.repaint();
-                panelUtama.revalidate();
+                // balek ke panel menu
+                resetPanelIsiMinyak(panelMenu);
             }
-        }
-        
+        } 
     }                                         
 
+    private void panelBtnMenuMouseEntered(java.awt.event.MouseEvent evt) {                                          
+        // TODO add your handling code here:
+        panelBtnMenu.setBackground(new Color(222, 95, 131));
+    }                                         
+
+    private void panelBtnMenuMouseExited(java.awt.event.MouseEvent evt) {                                         
+        // TODO add your handling code here:
+        panelBtnMenu.setBackground(new Color(196,69,105));
+    }                                        
+
+    private void labelIconMouseEntered(java.awt.event.MouseEvent evt) {                                       
+        // TODO add your handling code here:
+        panelBtnMenu.setBackground(new Color(222, 95, 131));
+    }                                      
+
+    private void labelMenuMouseEntered(java.awt.event.MouseEvent evt) {                                       
+        // TODO add your handling code here:
+        panelBtnMenu.setBackground(new Color(222, 95, 131));
+    }                                      
+
+    private void panelBtnMenuMousePressed(java.awt.event.MouseEvent evt) {                                          
+        // TODO add your handling code here:
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+
+        panelUtama.add(panelMenu);
+        panelUtama.repaint();
+        panelUtama.revalidate();
+    }                                         
+
+    private void labelIconMousePressed(java.awt.event.MouseEvent evt) {                                       
+        // TODO add your handling code here:
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+
+        panelUtama.add(panelMenu);
+        panelUtama.repaint();
+        panelUtama.revalidate();
+    }                                      
+
+    private void labelMenuMousePressed(java.awt.event.MouseEvent evt) {                                       
+        // TODO add your handling code here:
+        panelBtnMenu.setBackground(new Color(196,69,105));
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+
+        panelUtama.add(panelMenu);
+        panelUtama.repaint();
+        panelUtama.revalidate();
+    }                                      
+
+    public void resetPanelIsiMinyak(JPanel panelTujuan) {
+        textFieldJumlahLiter.setText("Masukkan jumlah liter");
+        labelIsiUlang.setText("Mohon tunggu sebentar ");
+        labelIsiUlang1.setText("Tangki SPBU sedang diisi ulang ");
+        buttonGroupBahanBakar.clearSelection();
+        labelValidasiLiter.setVisible(false);
+        labelIsiUlang.setVisible(false);
+        labelIsiUlang1.setVisible(false);
+        
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+
+        panelUtama.add(panelTujuan);
+        panelUtama.repaint();
+        panelUtama.revalidate();
+    }
+    
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -1217,12 +1392,11 @@ public class GUI extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-   
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new GUI().setVisible(true);
             }
         });
-    }
-
+    }                   
 }
