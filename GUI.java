@@ -1,6 +1,3 @@
-package com.mycompany.goperta;
-
-
 import java.awt.Color;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -9,13 +6,13 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class GUI extends javax.swing.JFrame {
-    
+
     private User user;
     private SPBU premium;
     private SPBU pertalite;
     private SPBU pertamax;
     private SPBU solar = new Solar();
-    
+
     private javax.swing.JButton buttonCekSaldo;
     private javax.swing.JButton buttonExit;
     private javax.swing.JButton buttonExit2;
@@ -78,7 +75,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPanel panelTopIsiMinyak;
     private javax.swing.JPanel panelTopUp;
     private javax.swing.JPanel panelUtama;
-    private javax.swing.JPanel panelWelcome;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JPasswordField passwordField2;
     private javax.swing.JRadioButton radioButtonPertalite;
@@ -105,7 +101,6 @@ public class GUI extends javax.swing.JFrame {
 
         buttonGroupBahanBakar = new javax.swing.ButtonGroup();
         panelFrame = new javax.swing.JPanel();
-        panelWelcome = new javax.swing.JPanel();
         panelUtama = new javax.swing.JPanel();
         panelCreateAccount = new javax.swing.JPanel();
         labelCreateAccount = new javax.swing.JLabel();
@@ -184,19 +179,6 @@ public class GUI extends javax.swing.JFrame {
 
         panelFrame.setBackground(new java.awt.Color(196, 69, 105));
         panelFrame.setLayout(new java.awt.CardLayout());
-
-        javax.swing.GroupLayout panelWelcomeLayout = new javax.swing.GroupLayout(panelWelcome);
-        panelWelcome.setLayout(panelWelcomeLayout);
-        panelWelcomeLayout.setHorizontalGroup(
-            panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 359, Short.MAX_VALUE)
-        );
-        panelWelcomeLayout.setVerticalGroup(
-            panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 532, Short.MAX_VALUE)
-        );
-
-        panelFrame.add(panelWelcome, "card3");
 
         panelUtama.setBackground(new java.awt.Color(196, 69, 105));
         panelUtama.setLayout(new java.awt.CardLayout());
@@ -343,11 +325,6 @@ public class GUI extends javax.swing.JFrame {
                 textFieldNoHPFocusLost(evt);
             }
         });
-        textFieldNoHP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldNoHPActionPerformed(evt);
-            }
-        });
 
         textFieldJenisKendaraan.setBackground(new java.awt.Color(252, 243, 243));
         textFieldJenisKendaraan.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -359,11 +336,6 @@ public class GUI extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 textFieldJenisKendaraanFocusLost(evt);
-            }
-        });
-        textFieldJenisKendaraan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldJenisKendaraanActionPerformed(evt);
             }
         });
 
@@ -379,11 +351,6 @@ public class GUI extends javax.swing.JFrame {
                 textFieldAlamatFocusLost(evt);
             }
         });
-        textFieldAlamat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldAlamatActionPerformed(evt);
-            }
-        });
 
         textFieldNama.setBackground(new java.awt.Color(252, 243, 243));
         textFieldNama.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -395,11 +362,6 @@ public class GUI extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 textFieldNamaFocusLost(evt);
-            }
-        });
-        textFieldNama.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldNamaActionPerformed(evt);
             }
         });
 
@@ -518,11 +480,6 @@ public class GUI extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 textFieldEmail2FocusLost(evt);
-            }
-        });
-        textFieldEmail2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldEmail2ActionPerformed(evt);
             }
         });
 
@@ -672,11 +629,6 @@ public class GUI extends javax.swing.JFrame {
         buttonLogout.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         buttonLogout.setText("Logout");
         buttonLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buttonLogout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonLogoutActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
         panelMenu.setLayout(panelMenuLayout);
@@ -728,41 +680,21 @@ public class GUI extends javax.swing.JFrame {
         buttonGroupBahanBakar.add(radioButtonPremium);
         radioButtonPremium.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         radioButtonPremium.setText("Premium");
-        radioButtonPremium.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radioButtonPremiumActionPerformed(evt);
-            }
-        });
 
         radioButtonPertalite.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupBahanBakar.add(radioButtonPertalite);
         radioButtonPertalite.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         radioButtonPertalite.setText("Pertalite");
-        radioButtonPertalite.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radioButtonPertaliteActionPerformed(evt);
-            }
-        });
 
         radioButtonPertamax.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupBahanBakar.add(radioButtonPertamax);
         radioButtonPertamax.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         radioButtonPertamax.setText("Pertamax");
-        radioButtonPertamax.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radioButtonPertamaxActionPerformed(evt);
-            }
-        });
 
         radioButtonSolar.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupBahanBakar.add(radioButtonSolar);
         radioButtonSolar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         radioButtonSolar.setText("Solar");
-        radioButtonSolar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radioButtonSolarActionPerformed(evt);
-            }
-        });
 
         labelLiter.setFont(new java.awt.Font("Century Gothic", 3, 20)); // NOI18N
         labelLiter.setForeground(new java.awt.Color(196, 69, 105));
@@ -778,11 +710,6 @@ public class GUI extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 textFieldJumlahLiterFocusLost(evt);
-            }
-        });
-        textFieldJumlahLiter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldJumlahLiterActionPerformed(evt);
             }
         });
 
@@ -1218,29 +1145,29 @@ public class GUI extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>                        
+    }
 
-    private void textFieldEmailFocusGained(java.awt.event.FocusEvent evt) {                                           
+    private void textFieldEmailFocusGained(java.awt.event.FocusEvent evt) {
         if(textFieldEmail.getText().equals("Masukkan email anda")) {
             textFieldEmail.setText("");
         }
-    }                                          
+    }
 
-    private void textFieldEmailFocusLost(java.awt.event.FocusEvent evt) {                                         
+    private void textFieldEmailFocusLost(java.awt.event.FocusEvent evt) {
         if(textFieldEmail.getText().equals("")) {
             textFieldEmail.setText("Masukkan email anda");
         }
-    }                                        
+    }
 
-    private void textFieldEmailActionPerformed(java.awt.event.ActionEvent evt) {                                               
+    private void textFieldEmailActionPerformed(java.awt.event.ActionEvent evt) {
 
-    }                                              
+    }
 
-    private void passwordFieldFocusGained(java.awt.event.FocusEvent evt) {                                          
+    private void passwordFieldFocusGained(java.awt.event.FocusEvent evt) {
 
-    }                                         
+    }
 
-    private void buttonNextActionPerformed(java.awt.event.ActionEvent evt) {                                           
+    private void buttonNextActionPerformed(java.awt.event.ActionEvent evt) {
         String email = textFieldEmail.getText();
         String password = String.valueOf(passwordField.getPassword());
         user = new User(email, password);
@@ -1252,61 +1179,61 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.add(panelIsiDataUser);
         panelUtama.repaint();
         panelUtama.revalidate();
-    }                                          
+    }
 
-    private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {                                           
+    private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {
         System.exit(0);
-    }                                          
+    }
 
-    private void textFieldNoHPFocusGained(java.awt.event.FocusEvent evt) {                                          
+    private void textFieldNoHPFocusGained(java.awt.event.FocusEvent evt) {
         if(textFieldNoHP.getText().equals("Masukkan nomor hp anda")) {
             textFieldNoHP.setText("");
         }
-    }                                         
+    }
 
-    private void textFieldNoHPFocusLost(java.awt.event.FocusEvent evt) {                                        
+    private void textFieldNoHPFocusLost(java.awt.event.FocusEvent evt) {
         if(textFieldNoHP.getText().equals("")) {
             textFieldNoHP.setText("Masukkan nomor hp anda");
         }
-    }                                       
+    }
 
-    private void textFieldJenisKendaraanFocusGained(java.awt.event.FocusEvent evt) {                                                    
+    private void textFieldJenisKendaraanFocusGained(java.awt.event.FocusEvent evt) {
         if(textFieldJenisKendaraan.getText().equals("Masukkan jenis kendaraan anda")) {
             textFieldJenisKendaraan.setText("");
         }
-    }                                                   
+    }
 
-    private void textFieldJenisKendaraanFocusLost(java.awt.event.FocusEvent evt) {                                                  
+    private void textFieldJenisKendaraanFocusLost(java.awt.event.FocusEvent evt) {
         if(textFieldJenisKendaraan.getText().equals("")) {
             textFieldJenisKendaraan.setText("Masukkan jenis kendaraan anda");
         }
-    }                                                 
+    }
 
-    private void textFieldAlamatFocusGained(java.awt.event.FocusEvent evt) {                                            
+    private void textFieldAlamatFocusGained(java.awt.event.FocusEvent evt) {
         if(textFieldAlamat.getText().equals("Masukkan alamat anda")) {
             textFieldAlamat.setText("");
         }
-    }                                           
+    }
 
-    private void textFieldAlamatFocusLost(java.awt.event.FocusEvent evt) {                                          
+    private void textFieldAlamatFocusLost(java.awt.event.FocusEvent evt) {
         if(textFieldAlamat.getText().equals("")) {
             textFieldAlamat.setText("Masukkan alamat anda");
         }
-    }                                         
+    }
 
-    private void textFieldNamaFocusGained(java.awt.event.FocusEvent evt) {                                          
+    private void textFieldNamaFocusGained(java.awt.event.FocusEvent evt) {
         if(textFieldNama.getText().equals("Masukkan nama anda")) {
             textFieldNama.setText("");
         }
-    }                                         
+    }
 
-    private void textFieldNamaFocusLost(java.awt.event.FocusEvent evt) {                                        
+    private void textFieldNamaFocusLost(java.awt.event.FocusEvent evt) {
         if(textFieldNama.getText().equals("")) {
             textFieldNama.setText("Masukkan nama anda");
         }
-    }                                       
+    }
 
-    private void buttonRegisterActionPerformed(java.awt.event.ActionEvent evt) {                                               
+    private void buttonRegisterActionPerformed(java.awt.event.ActionEvent evt) {
         String nama = textFieldNama.getText();
         String alamat = textFieldAlamat.getText();
         String jenisKendaraan = textFieldJenisKendaraan.getText();
@@ -1321,9 +1248,9 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.add(panelLogin);
         panelUtama.repaint();
         panelUtama.revalidate();
-    }                                              
+    }
 
-    private void buttonKembali1ActionPerformed(java.awt.event.ActionEvent evt) {                                               
+    private void buttonKembali1ActionPerformed(java.awt.event.ActionEvent evt) {
         panelUtama.removeAll();
         panelUtama.repaint();
         panelUtama.revalidate();
@@ -1331,17 +1258,17 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.add(panelCreateAccount);
         panelUtama.repaint();
         panelUtama.revalidate();
-    }                                              
+    }
 
-    private void passwordField2FocusLost(java.awt.event.FocusEvent evt) {                                         
+    private void passwordField2FocusLost(java.awt.event.FocusEvent evt) {
 
-    }                                        
+    }
 
-    private void textFieldEmail2FocusGained(java.awt.event.FocusEvent evt) {                                            
+    private void textFieldEmail2FocusGained(java.awt.event.FocusEvent evt) {
         if(textFieldEmail2.getText().equals("Masukkan email anda")) {
             textFieldEmail2.setText("");
         }
-    }                                           
+    }
 
     private void textFieldEmail2FocusLost(java.awt.event.FocusEvent evt) {                                          
         if(textFieldEmail2.getText().equals("")) {
@@ -1349,7 +1276,7 @@ public class GUI extends javax.swing.JFrame {
         }
     }                                         
 
-    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {
         if(textFieldEmail2.getText().equals(user.getEmail()) && String.valueOf(passwordField2.getPassword()).equals(user.getPassword())) {
             panelUtama.removeAll();
             panelUtama.repaint();
@@ -1362,17 +1289,17 @@ public class GUI extends javax.swing.JFrame {
         else {
             labelValidasi.setForeground(Color.black);
         }
-    }                                           
+    }
 
-    private void buttonExit2ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    private void buttonExit2ActionPerformed(java.awt.event.ActionEvent evt) {
         System.exit(0);
-    }                                           
+    }
 
-    private void buttonIsiMinyakActionPerformed(java.awt.event.ActionEvent evt) {                                                
+    private void buttonIsiMinyakActionPerformed(java.awt.event.ActionEvent evt) {    
         resetPanelIsiMinyak(panelIsiMinyak);        
-    }                                               
+    }   
 
-    private void buttonCekSaldoActionPerformed(java.awt.event.ActionEvent evt) {                                               
+    private void buttonCekSaldoActionPerformed(java.awt.event.ActionEvent evt) {   
         panelUtama.removeAll();
         panelUtama.repaint();
         panelUtama.revalidate();
@@ -1380,9 +1307,9 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.add(panelCekSaldo);
         panelUtama.repaint();
         panelUtama.revalidate();
-    }                                              
+    }  
 
-    private void buttonTopUpActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    private void buttonTopUpActionPerformed(java.awt.event.ActionEvent evt) {
         panelUtama.removeAll();
         panelUtama.repaint();
         panelUtama.revalidate();
@@ -1390,9 +1317,9 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.add(panelTopUp);
         panelUtama.repaint();
         panelUtama.revalidate();
-    }                                           
+    }
 
-    private void buttonProfilActionPerformed(java.awt.event.ActionEvent evt) {                                             
+    private void buttonProfilActionPerformed(java.awt.event.ActionEvent evt) { 
         panelUtama.removeAll();
         panelUtama.repaint();
         panelUtama.revalidate();
@@ -1400,19 +1327,19 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.add(panelProfil);
         panelUtama.repaint();
         panelUtama.revalidate();
-    }                                            
+    }
 
-    private void textFieldJumlahLiterFocusGained(java.awt.event.FocusEvent evt) {                                                 
+    private void textFieldJumlahLiterFocusGained(java.awt.event.FocusEvent evt) {     
        if(textFieldJumlahLiter.getText().equals("Masukkan jumlah liter")) {
             textFieldJumlahLiter.setText("");
         }
-    }                                                
+    }    
 
-    private void textFieldJumlahLiterFocusLost(java.awt.event.FocusEvent evt) {                                               
+    private void textFieldJumlahLiterFocusLost(java.awt.event.FocusEvent evt) {   
         if(textFieldJumlahLiter.getText().equals("")) {
             textFieldJumlahLiter.setText("Masukkan jumlah liter");
         }
-    }                                              
+    }  
 
     private void buttonIsiActionPerformed(java.awt.event.ActionEvent evt) {                                          
         int liter;
@@ -1510,7 +1437,7 @@ public class GUI extends javax.swing.JFrame {
         } 
     }                                         
 
-    private void panelBtnMenu1MouseEntered(java.awt.event.MouseEvent evt) {                                           
+    private void panelBtnMenu1MouseEntered(java.awt.event.MouseEvent evt) {
         panelBtnMenu1.setBackground(new Color(222, 95, 131));
     }                                          
 
@@ -1526,7 +1453,7 @@ public class GUI extends javax.swing.JFrame {
         panelBtnMenu1.setBackground(new Color(222, 95, 131));
     }                                       
 
-    private void panelBtnMenu1MousePressed(java.awt.event.MouseEvent evt) {                                           
+    private void panelBtnMenu1MousePressed(java.awt.event.MouseEvent evt) {
         panelBtnMenu1.setBackground(new Color(196,69,105));
         panelUtama.removeAll();
         panelUtama.repaint();
@@ -1589,7 +1516,7 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.revalidate();
     }                                       
 
-    private void panelBtnMenu2MouseEntered(java.awt.event.MouseEvent evt) {                                           
+    private void panelBtnMenu2MouseEntered(java.awt.event.MouseEvent evt) {
         panelBtnMenu2.setBackground(new Color(222, 95, 131));
     }                                          
 
@@ -1597,7 +1524,7 @@ public class GUI extends javax.swing.JFrame {
         panelBtnMenu2.setBackground(new Color(196,69,105));
     }                                         
 
-    private void panelBtnMenu2MousePressed(java.awt.event.MouseEvent evt) {                                           
+    private void panelBtnMenu2MousePressed(java.awt.event.MouseEvent evt) {
         panelBtnMenu2.setBackground(new Color(196,69,105));
         panelUtama.removeAll();
         panelUtama.repaint();
@@ -1638,7 +1565,7 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.revalidate();
     }                                       
 
-    private void panelBtnMenu3MouseEntered(java.awt.event.MouseEvent evt) {                                           
+    private void panelBtnMenu3MouseEntered(java.awt.event.MouseEvent evt) {
         panelBtnMenu3.setBackground(new Color(222, 95, 131));
     }                                          
 
@@ -1646,7 +1573,7 @@ public class GUI extends javax.swing.JFrame {
         panelBtnMenu3.setBackground(new Color(196,69,105));
     }                                         
 
-    private void panelBtnMenu3MousePressed(java.awt.event.MouseEvent evt) {                                           
+    private void panelBtnMenu3MousePressed(java.awt.event.MouseEvent evt) {
         panelBtnMenu3.setBackground(new Color(196,69,105));
         panelUtama.removeAll();
         panelUtama.repaint();
