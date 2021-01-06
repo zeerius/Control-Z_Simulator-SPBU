@@ -1,4 +1,4 @@
-public abstract class SPBU 
+public abstract class SPBU
 {
     public static int pendapatan = 0;
 
@@ -9,12 +9,14 @@ public abstract class SPBU
     }
 
     // abstract method
-    public abstract void isiMinyak();
+    public abstract void isiMinyak(User user, int liter, int biaya);
 
-    public abstract boolean tambahPelanggan(Pelanggan pelanggan);
+    public abstract BahanBakar getTangki();
 
-    public abstract void hapusPelanggan();
-    
+    public abstract boolean cekIsiTangki(int liter);
+
+    public abstract boolean cekSaldoUser(int saldo);
+
     // keterangan
     public String toString()
     {
