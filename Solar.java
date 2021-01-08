@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Solar extends SPBU
 {
     private BahanBakar tangkiSolar;
