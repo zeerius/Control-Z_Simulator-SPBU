@@ -1,3 +1,9 @@
+/**
+ * Class User berisi data-data user.
+ *
+ * @author (Control-Z)
+ * @version (08/01/2021)
+ */
 public class User implements TambahKurang {
 
     private String email;
@@ -10,7 +16,9 @@ public class User implements TambahKurang {
   
    /**
     * Method constructor User
-    * @param email,password
+    * 
+    * @param email 	email user
+    * @param password	password user
     */
     public User(String email, String password) {
         this.email = email;
@@ -24,6 +32,8 @@ public class User implements TambahKurang {
 	
    /**
     * Method mutator untuk memasukkan email
+    *
+    * @param email email user
     */
     public void setEmail(String email) {
         this.email = email;
@@ -31,6 +41,8 @@ public class User implements TambahKurang {
 
     /**
      * Method accessor untuk mengembalikan email User
+     * 
+     * @return email 
      */
     public String getEmail() {
         return this.email;
@@ -38,6 +50,8 @@ public class User implements TambahKurang {
 
     /**
      * Method mutator untuk memasukkan password User
+     * 
+     * @param password password user
      */
     public void setPassword(String password) {
         this.password = password;
@@ -45,6 +59,8 @@ public class User implements TambahKurang {
 
     /**
      * Method accessor untuk mengembalikan Password User
+     *
+     * @return password
      */
     public String getPassword() {
         return this.password;
@@ -52,6 +68,8 @@ public class User implements TambahKurang {
 
     /**
      * Method mutator untuk memasukkan nama User
+     *
+     * @param nama nama user
      */
     public void setNama(String nama) {
         this.nama = nama;
@@ -59,6 +77,8 @@ public class User implements TambahKurang {
 
     /**
      * Method accessor untuk mengembalikan nama User
+     *
+     * @return nama
      */
     public String getNama() {
         return this.nama;
@@ -66,6 +86,8 @@ public class User implements TambahKurang {
 
     /**
      * Method mutator untuk memasukkan alamat User
+     *
+     * @param alamat alamat user
      */
     public void setAlamat(String alamat) {
         this.alamat = alamat;
@@ -73,6 +95,8 @@ public class User implements TambahKurang {
 
     /**
      * Method accessor untuk mengembalikan alamat User
+     *
+     * @return alamat
      */
     public String getAlamat() {
         return this.alamat;
@@ -80,6 +104,8 @@ public class User implements TambahKurang {
 	
     /**
      * Method mutator untuk memasukkan jenis kendaraan milik User
+     *
+     * @param jenisKendaraan jenis kendaraan user
      */
     public void setJenisKendaraan(String jenisKendaraan) {
         this.jenisKendaraan = jenisKendaraan;
@@ -87,6 +113,8 @@ public class User implements TambahKurang {
 
     /**
      * Method accessor untuk mengembalikan jenis kendaraan milik User
+     *
+     * @return jenisKendaraan
      */
     public String getJenisKendaraan() {
         return this.jenisKendaraan;
@@ -94,6 +122,8 @@ public class User implements TambahKurang {
 
     /**
      * Method mutator untuk memasukkan no HP User
+     *
+     * @param noHp nomor hp user
      */
     public void setNoHp(String noHp) {
         this.noHp = noHp;
@@ -101,6 +131,8 @@ public class User implements TambahKurang {
 
     /**
      * Method accessor untuk mengembalikan no HP User
+     *
+     * @return noHp
      */
     public String getNoHp() {
         return this.noHp;
@@ -108,15 +140,17 @@ public class User implements TambahKurang {
 	
    /**
     * Method untuk menambahkan jumlah saldo User
-    * @param saldo
+    *
+    * @param saldo saldo user
     */
    @Override
    public void tambah(int saldo) {
-   this.saldo += saldo;
+   	this.saldo += saldo;
    }
 
     /**
      * Method untuk mengurangi jumlah saldo User
+     *
      * @param saldo
      */
     @Override
@@ -126,6 +160,8 @@ public class User implements TambahKurang {
 
     /**
      * Method accessor untuk mengembalikan saldo User
+     *
+     * @return saldo
      */
     public int getSaldo() {
         return this.saldo;
@@ -133,9 +169,11 @@ public class User implements TambahKurang {
 
     /**
      * Method untuk menampilkan saldo dan jenis kendaraan milik User dalam bentuk String
+     *
+     * @return saldo dan jenisKendaraan
      */
     public String toString() {
-    return "Pelanggan memiliki saldo sejumlah Rp "+this.saldo+" dan jenis kendaraan yang dimilikinya adalah "+this.jenisKendaraan;
+    	return "Pelanggan memiliki saldo sejumlah Rp "+this.saldo+" dan jenis kendaraan yang dimilikinya adalah "+this.jenisKendaraan;
     }
   
 }
