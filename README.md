@@ -29,11 +29,15 @@ Dimasa COVID 19 ini, interaksi langsung antar sesama sebisa mungkin dibatasi, te
 4. Open <b>Source Packages</b> then open <b>com.controlz.goperta</b><br>
 5. Right click on <b>GUI.java</b> and Run File
 
+## Find Us On YouTube : https://youtu.be/p3ubpLdDYLw
+
 ## By:
-Sulthan Zaidan Fauzi<br> 
-Siti Mawaddah<br>
-Siti Balqis Humaira<br> 
-Intan Malahayati<br>
-Raihan Karuna<br>
-<br>
+<ul>
+  <li>Sulthan Zaidan Fauzi (CEO)</li>
+  <li>Siti Mawaddah</li>
+  <li>Siti Balqis Humaira</li>
+  <li>Intan Malahayati</li>
+  <li>Raihan Karuna</li>
+</ul>
+
 <b>&copy; Copyright Control-Z (January 8th, 2021)</b>
