@@ -2947,6 +2947,16 @@ public class GUI extends javax.swing.JFrame {
         buttonSaveEmail.setVisible(false);
         buttonSaveNoHp.setVisible(false);
     }
+
+    private void addPanelUtama() {
+        panelFrame.removeAll();
+        panelFrame.repaint();
+        panelFrame.revalidate();
+
+        panelFrame.add(panelUtama);
+        panelFrame.repaint();
+        panelFrame.revalidate();
+    }
     
     private void efekSuara(String path) {
         URL url = GUI.class.getResource(path);
