@@ -1,8 +1,3 @@
-/**
- * Program yang berisi class User
- *
- * @author Siti Balqis Humaira
- */
 public class User implements TambahKurang {
 
     private String email;
