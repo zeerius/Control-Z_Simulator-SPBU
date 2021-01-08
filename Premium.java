@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Premium extends SPBU
 {
     private BahanBakar tangkiPremium;
