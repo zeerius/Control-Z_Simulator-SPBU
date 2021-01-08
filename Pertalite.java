@@ -43,6 +43,7 @@ public class Pertalite extends SPBU
     
     /**
      * Method untuk mengecek isi tangki.
+     * @param liter jumlah liter bahan bakar yang akan diisi
      * @return true jika isi tangki cukup untuk melakukan transaksi, false jika tidak
      */
     @Override
@@ -53,6 +54,7 @@ public class Pertalite extends SPBU
     
     /**
      * Method untuk mengecek saldo user.
+     * @param saldo saldo user
      * @return true jika saldo user cukup untuk melakukan transaksi, false jika tidak
      */
     @Override
