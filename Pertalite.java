@@ -1,5 +1,3 @@
-package com.mycompany.gopertabetaversion2;
-
 import java.util.Scanner;
 
 public class Pertalite extends SPBU
