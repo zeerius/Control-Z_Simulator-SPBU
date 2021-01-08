@@ -33,12 +33,14 @@ public class BahanBakar implements TambahKurang
     {
         return this.kapasitas;
     }
-
+    
+    @Override
     public void tambah(int isiTangki)
     {
         this.isiTangki += isiTangki;
     }
-
+    
+    @Override
     public void kurangi(int isiTangki)
     {
         this.isiTangki -= isiTangki;
