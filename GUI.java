@@ -2221,6 +2221,18 @@ public class GUI extends javax.swing.JFrame {
         labelEmailProfil1.setText(email);
         labelNoHpProfil1.setText(noHp);
 
+        textFieldEditNama.setVisible(false);
+        textFieldEditAlamat.setVisible(false);
+        comboBoxJenisKendaraan2.setVisible(false);
+        textFieldEditEmail.setVisible(false);
+        textFieldEditNoHp.setVisible(false);
+
+        textFieldEditNama.setText(user.getNama());
+        textFieldEditAlamat.setText(user.getAlamat());
+        comboBoxJenisKendaraan2.setSelectedItem(user.getJenisKendaraan());
+        textFieldEditEmail.setText(user.getEmail());
+        textFieldEditNoHp.setText(user.getNoHp());
+
         panelUtama.removeAll();
         panelUtama.repaint();
         panelUtama.revalidate();
@@ -2228,6 +2240,42 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.add(panelProfil);
         panelUtama.repaint();
         panelUtama.revalidate();
+    }
+
+    private void buttonEditNamaActionPerformed(java.awt.event.ActionEvent evt) {
+        labelNamaProfil1.setVisible(false);
+        textFieldEditNama.setVisible(true);
+        textFieldEditNama.requestFocus();
+        buttonSaveNama.setVisible(true);
+    }
+
+    private void buttonEditAlamatActionPerformed(java.awt.event.ActionEvent evt) {
+        labelAlamatProfil1.setVisible(false);
+        textFieldEditAlamat.setVisible(true);
+        textFieldEditAlamat.requestFocus();
+        buttonSaveAlamat.setVisible(true);
+    }
+
+    private void buttonEditJenisKendaraanActionPerformed(java.awt.event.ActionEvent evt) {
+        labelJenisKendaraanProfil1.setVisible(false);
+        comboBoxJenisKendaraan2.setVisible(true);
+        comboBoxJenisKendaraan2.setSelectedItem(user.getJenisKendaraan());
+        comboBoxJenisKendaraan2.requestFocus();
+        buttonSaveJenisKendaraan.setVisible(true);
+    }
+
+    private void buttonEditNoHpActionPerformed(java.awt.event.ActionEvent evt) {
+        labelNoHpProfil1.setVisible(false);
+        textFieldEditNoHp.setVisible(true);
+        textFieldEditNoHp.requestFocus();
+        buttonSaveNoHp.setVisible(true);
+    }
+
+    private void buttonEditEmailActionPerformed(java.awt.event.ActionEvent evt) {
+        labelEmailProfil1.setVisible(false);
+        textFieldEditEmail.setVisible(true);
+        textFieldEditEmail.requestFocus();
+        buttonSaveEmail.setVisible(true);
     }
 
     private void buttonLogoutActionPerformed(java.awt.event.ActionEvent evt) {
