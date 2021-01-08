@@ -2357,6 +2357,18 @@ public class GUI extends javax.swing.JFrame {
         panelUtama.revalidate();
     }
 
+    private void buttonTopUpActionPerformed(java.awt.event.ActionEvent evt) {
+        resetPanelTopUp();
+
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+
+        panelUtama.add(panelTopUp);
+        panelUtama.repaint();
+        panelUtama.revalidate();
+    }
+
     private void panelBtnMenu1MouseEntered(java.awt.event.MouseEvent evt) {
         panelBtnMenu1.setBackground(new Color(230,156,40));
     }
