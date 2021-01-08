@@ -2209,73 +2209,7 @@ public class GUI extends javax.swing.JFrame {
     }
 
     private void buttonProfilActionPerformed(java.awt.event.ActionEvent evt) {
-        String nama = user.getNama();
-        String alamat = user.getAlamat();
-        String jenisKendaraan = user.getJenisKendaraan();
-        String email = user.getEmail();
-        String noHp = user.getNoHp();
 
-        labelNamaProfil1.setText(nama);
-        labelAlamatProfil1.setText(alamat);
-        labelJenisKendaraanProfil1.setText(jenisKendaraan);
-        labelEmailProfil1.setText(email);
-        labelNoHpProfil1.setText(noHp);
-
-        textFieldEditNama.setVisible(false);
-        textFieldEditAlamat.setVisible(false);
-        comboBoxJenisKendaraan2.setVisible(false);
-        textFieldEditEmail.setVisible(false);
-        textFieldEditNoHp.setVisible(false);
-
-        textFieldEditNama.setText(user.getNama());
-        textFieldEditAlamat.setText(user.getAlamat());
-        comboBoxJenisKendaraan2.setSelectedItem(user.getJenisKendaraan());
-        textFieldEditEmail.setText(user.getEmail());
-        textFieldEditNoHp.setText(user.getNoHp());
-
-        panelUtama.removeAll();
-        panelUtama.repaint();
-        panelUtama.revalidate();
-
-        panelUtama.add(panelProfil);
-        panelUtama.repaint();
-        panelUtama.revalidate();
-    }
-
-    private void buttonEditNamaActionPerformed(java.awt.event.ActionEvent evt) {
-        labelNamaProfil1.setVisible(false);
-        textFieldEditNama.setVisible(true);
-        textFieldEditNama.requestFocus();
-        buttonSaveNama.setVisible(true);
-    }
-
-    private void buttonEditAlamatActionPerformed(java.awt.event.ActionEvent evt) {
-        labelAlamatProfil1.setVisible(false);
-        textFieldEditAlamat.setVisible(true);
-        textFieldEditAlamat.requestFocus();
-        buttonSaveAlamat.setVisible(true);
-    }
-
-    private void buttonEditJenisKendaraanActionPerformed(java.awt.event.ActionEvent evt) {
-        labelJenisKendaraanProfil1.setVisible(false);
-        comboBoxJenisKendaraan2.setVisible(true);
-        comboBoxJenisKendaraan2.setSelectedItem(user.getJenisKendaraan());
-        comboBoxJenisKendaraan2.requestFocus();
-        buttonSaveJenisKendaraan.setVisible(true);
-    }
-
-    private void buttonEditNoHpActionPerformed(java.awt.event.ActionEvent evt) {
-        labelNoHpProfil1.setVisible(false);
-        textFieldEditNoHp.setVisible(true);
-        textFieldEditNoHp.requestFocus();
-        buttonSaveNoHp.setVisible(true);
-    }
-
-    private void buttonEditEmailActionPerformed(java.awt.event.ActionEvent evt) {
-        labelEmailProfil1.setVisible(false);
-        textFieldEditEmail.setVisible(true);
-        textFieldEditEmail.requestFocus();
-        buttonSaveEmail.setVisible(true);
     }
 
     private void buttonLogoutActionPerformed(java.awt.event.ActionEvent evt) {
@@ -2405,6 +2339,22 @@ public class GUI extends javax.swing.JFrame {
                 resetPanelIsiMinyak(panelMenu);
             }
         }
+    }
+
+    private void buttonCekSaldoActionPerformed(java.awt.event.ActionEvent evt) {
+        resetPanelCekSaldo();
+    }
+
+    private void resetPanelCekSaldo() {
+        labelSaldoUser.setText(user.getSaldo() + ",-");
+
+        panelUtama.removeAll();
+        panelUtama.repaint();
+        panelUtama.revalidate();
+
+        panelUtama.add(panelCekSaldo);
+        panelUtama.repaint();
+        panelUtama.revalidate();
     }
 
     private void panelBtnMenu1MouseEntered(java.awt.event.MouseEvent evt) {
@@ -2633,6 +2583,107 @@ public class GUI extends javax.swing.JFrame {
             passwordField.setEchoChar('\u25cf');
         }
         passwordField.requestFocus();
+    }
+
+    private void buttonEditNamaActionPerformed(java.awt.event.ActionEvent evt) {
+        labelNamaProfil1.setVisible(false);
+        textFieldEditNama.setVisible(true);
+        textFieldEditNama.requestFocus();
+        buttonSaveNama.setVisible(true);
+    }
+
+    private void buttonSaveNamaActionPerformed(java.awt.event.ActionEvent evt) {
+        String nama = textFieldEditNama.getText();
+        if(nama.equals("")){
+            JOptionPane.showMessageDialog(this, "Nama tidak boleh kosong!", "EDIT NAMA", JOptionPane.ERROR_MESSAGE);
+            textFieldEditNama.requestFocus();
+            return;
+        }
+        user.setNama(nama);
+        labelNamaProfil1.setText(nama);
+        labelNamaProfil1.setVisible(true);
+        textFieldEditNama.setVisible(false);
+        buttonSaveNama.setVisible(false);
+    }
+
+    private void buttonEditAlamatActionPerformed(java.awt.event.ActionEvent evt) {
+        labelAlamatProfil1.setVisible(false);
+        textFieldEditAlamat.setVisible(true);
+        textFieldEditAlamat.requestFocus();
+        buttonSaveAlamat.setVisible(true);
+    }
+
+    private void buttonSaveAlamatActionPerformed(java.awt.event.ActionEvent evt) {
+        String alamat = textFieldEditAlamat.getText();
+        if(alamat.equals("")){
+            JOptionPane.showMessageDialog(this, "Alamat tidak boleh kosong!", "EDIT NAMA", JOptionPane.ERROR_MESSAGE);
+            textFieldEditAlamat.requestFocus();
+            return;
+        }
+        user.setAlamat(alamat);
+        labelAlamatProfil1.setText(alamat);
+        labelAlamatProfil1.setVisible(true);
+        textFieldEditAlamat.setVisible(false);
+        buttonSaveAlamat.setVisible(false);
+    }
+
+    private void buttonEditJenisKendaraanActionPerformed(java.awt.event.ActionEvent evt) {
+        labelJenisKendaraanProfil1.setVisible(false);
+        comboBoxJenisKendaraan2.setVisible(true);
+        comboBoxJenisKendaraan2.setSelectedItem(user.getJenisKendaraan());
+        comboBoxJenisKendaraan2.requestFocus();
+        buttonSaveJenisKendaraan.setVisible(true);
+    }
+
+    private void buttonSaveJenisKendaraanActionPerformed(java.awt.event.ActionEvent evt) {
+        String jenisKendaraan = (String) comboBoxJenisKendaraan2.getSelectedItem();
+        user.setJenisKendaraan(jenisKendaraan);
+        labelJenisKendaraanProfil1.setText(jenisKendaraan);
+        labelJenisKendaraanProfil1.setVisible(true);
+        comboBoxJenisKendaraan2.setVisible(false);
+        buttonSaveJenisKendaraan.setVisible(false);
+    }
+
+    private void buttonEditNoHpActionPerformed(java.awt.event.ActionEvent evt) {
+        labelNoHpProfil1.setVisible(false);
+        textFieldEditNoHp.setVisible(true);
+        textFieldEditNoHp.requestFocus();
+        buttonSaveNoHp.setVisible(true);
+    }
+
+    private void buttonSaveNoHpActionPerformed(java.awt.event.ActionEvent evt) {
+        String noHp = textFieldEditNoHp.getText();
+        if(noHp.equals("")){
+            JOptionPane.showMessageDialog(this, "Nomor HP tidak boleh kosong!", "EDIT NAMA", JOptionPane.ERROR_MESSAGE);
+            textFieldEditNoHp.requestFocus();
+            return;
+        }
+        user.setNoHp(noHp);
+        labelNoHpProfil1.setText(noHp);
+        labelNoHpProfil1.setVisible(true);
+        textFieldEditNoHp.setVisible(false);
+        buttonSaveNoHp.setVisible(false);
+    }
+
+    private void buttonEditEmailActionPerformed(java.awt.event.ActionEvent evt) {
+        labelEmailProfil1.setVisible(false);
+        textFieldEditEmail.setVisible(true);
+        textFieldEditEmail.requestFocus();
+        buttonSaveEmail.setVisible(true);
+    }
+
+    private void buttonSaveEmailActionPerformed(java.awt.event.ActionEvent evt) {
+        String email = textFieldEditEmail.getText();
+        if(email.equals("")){
+            JOptionPane.showMessageDialog(this, "Email tidak boleh kosong!", "EDIT NAMA", JOptionPane.ERROR_MESSAGE);
+            textFieldEditEmail.requestFocus();
+            return;
+        }
+        user.setEmail(email);
+        labelEmailProfil1.setText(email);
+        labelEmailProfil1.setVisible(true);
+        textFieldEditEmail.setVisible(false);
+        buttonSaveEmail.setVisible(false);
     }
 
     private void passwordFieldKeyTyped(java.awt.event.KeyEvent evt) {
