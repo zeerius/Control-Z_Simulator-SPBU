@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Pertalite extends SPBU
 {
     private BahanBakar tangkiPertalite;
