@@ -19,7 +19,7 @@ public class User implements TambahKurang {
         this.alamat = "";
         this.jenisKendaraan = "";
         this.noHp = "";
-        this.saldo = 0;
+        this.saldo = 10000;
     }
 	
    /**
@@ -77,9 +77,10 @@ public class User implements TambahKurang {
     public String getAlamat() {
         return this.alamat;
     }
-	/**
-	 * Method mutator untuk memasukkan jenis kendaraan milik User
-	 */
+	
+    /**
+     * Method mutator untuk memasukkan jenis kendaraan milik User
+     */
     public void setJenisKendaraan(String jenisKendaraan) {
         this.jenisKendaraan = jenisKendaraan;
     }
@@ -120,7 +121,7 @@ public class User implements TambahKurang {
      */
     @Override
     public void kurangi(int saldo) {
-    this.saldo -= saldo;
+        this.saldo -= saldo;
     }
 
     /**
