@@ -28,7 +28,7 @@ public class Pertalite extends SPBU
     }
     
     /**
-     * Method untuk mengisi minyak pada tangki.
+     * Method untuk mengisi minyak user.
      * @param user pengguna jasa SPBU
      * @param liter jumlah liter bahan bakar yang akan diisi
      * @param biaya biaya transaksi
