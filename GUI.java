@@ -2949,13 +2949,21 @@ public class GUI extends javax.swing.JFrame {
     }
 
     private void addPanelUtama() {
-        panelFrame.removeAll();
-        panelFrame.repaint();
-        panelFrame.revalidate();
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                panelFrame.removeAll();
+                panelFrame.repaint();
+                panelFrame.revalidate();
 
-        panelFrame.add(panelUtama);
-        panelFrame.repaint();
-        panelFrame.revalidate();
+                panelFrame.add(panelUtama);
+                panelFrame.repaint();
+                panelFrame.revalidate();
+            }
+        };
+        efekSuara("sounds/start.wav");
+        timer.schedule(task, 5000);
     }
     
     private void efekSuara(String path) {
