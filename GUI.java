@@ -2386,6 +2386,11 @@ public class GUI extends javax.swing.JFrame {
         }
     }
 
+    private void resetPanelTopUp() {
+        textFieldJumlahTopUp.setText("Masukkan jumlah top up");
+        labelValidasiTopUp.setVisible(false);
+    }
+
     private void panelBtnMenu1MouseEntered(java.awt.event.MouseEvent evt) {
         panelBtnMenu1.setBackground(new Color(230,156,40));
     }
