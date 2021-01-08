@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class GUI extends javax.swing.JFrame {
+public class goPERTA extends javax.swing.JFrame {
     
     private User user;
     private Premium premium = new Premium();
@@ -156,7 +156,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JTextField textFieldNama;
     private javax.swing.JTextField textFieldNoHP;
 
-    public GUI() {
+    public goPERTA() {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_HORIZ);
         setVisible(true);
@@ -2967,7 +2967,7 @@ public class GUI extends javax.swing.JFrame {
     }
     
     private void efekSuara(String path) {
-        URL url = GUI.class.getResource(path);
+        URL url = goPERTA.class.getResource(path);
         AudioClip clip = Applet.newAudioClip(url);
         clip.play();
     }
@@ -2976,7 +2976,7 @@ public class GUI extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new GUI().setVisible(true);
+                new goPERTA().setVisible(true);
             }
         });
     }
