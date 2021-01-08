@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Pertamax extends SPBU
 {
     private BahanBakar tangkiPertamax;
